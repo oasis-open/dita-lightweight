@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD LW DITA Task//EN"
+ "task.dtd">
+<task id="abc123">
+<title>test</title>
+<shortdesc>test of stuff</shortdesc>
+<taskbody>
+<context>
+<p>and stuff</p>
+</context>
+<steps-informal>
+<p>and other stuff</p>
+<ol>
+<li><p>like</p></li>
+<li><p>so</p></li>
+</ol>
+</steps-informal>
+<example>
+<p>ta dah!</p>
+</example>
+</taskbody>
+</task>

@@ -1,0 +1,114 @@
+<!--  Refer to this file by the following public identifier or an
+      appropriate system identifier: 
+PUBLIC "-//OASIS//DTD LW DITA Task//EN"
+      Delivered as file "task.dtd"                                 -->
+
+<!-- The public ID above refers to the latest version of this DTD.
+     To refer to this specific version, you may use this value:
+PUBLIC "-//OASIS//DTD LW DITA 1.3 Task//EN"                           -->
+
+<!-- ============================================================= -->
+<!--                    ADD PHRASE ELEMENTS                        -->
+<!-- ============================================================= -->
+
+<!-- none -->
+<!-- ENTITY % ph           "ph | ADD ELEMENTS HERE"       -->
+
+
+<!-- ============================================================= -->
+<!--                    ADD FILTERING ATTRIBUTES                   -->
+<!-- ============================================================= -->
+
+<!-- none-->
+<!-- ENTITY % filter-adds 
+      "ADD-ATTRIBUTE-HERE      CDATA                        #IMPLIED"-->
+
+
+<!-- ============================================================= -->
+<!--                    DECLARE USE OF ELEMENT/ATTRIBUTE DOMAINS                 -->
+<!-- ============================================================= -->
+
+<!--none-->
+<!ENTITY included-domains                         " "                >
+
+<!-- ============================================================= -->
+<!--                    REMOVE ATTRIBUTE GROUPS                    -->
+<!-- ============================================================= -->
+
+<!-- Remove a group by uncommenting its redefinition below -->
+
+<!--ENTITY % filters " " -->
+<!--ENTITY % reuse " " -->
+<!--ENTITY % variable-content " " -->
+<!--ENTITY % variable-links " " -->
+<!--ENTITY % localization " " -->
+<!--ENTITY % nested-blocks "p" -->
+
+<!--For each group uncommented/removed add a corresponding constraint value to 
+    the excluded-domains entity. Use the syntax no-xxx-c for each constraint.
+    For example, if you removed reuse attributes, add the value "no-reuse-c" 
+    to the excluded-domains entity definition-->
+<!ENTITY excluded-domains                         " "                >
+
+<!-- ============================================================= -->
+<!--                    INCLUDE TOPIC AND SECTION MODULES          -->
+<!-- ============================================================= -->
+
+<!--                    Embed topic module to get generic elements -->
+<!ENTITY % topic-type   PUBLIC 
+"-//OASIS//ELEMENTS LW DITA Topic//EN" 
+"topic.mod"                                                          >
+%topic-type;
+
+<!--                    Embed task module to get task elements -->
+<!ENTITY % task-type   PUBLIC 
+"-//OASIS//ELEMENTS LW DITA Task//EN" 
+"task.mod"                                                          >
+%task-type;
+
+<!--                    Embed section modules                      -->
+<!--                    Embed prereq module to get prereq section -->
+<!ENTITY % prereqSection-type   PUBLIC 
+"-//OASIS//ELEMENTS LW DITA Task Prereq//EN" 
+"prereqSection.mod"                                                          >
+%prereqSection-type;
+
+<!--                    Embed context module to get context section -->
+<!ENTITY % contextSection-type   PUBLIC 
+"-//OASIS//ELEMENTS LW DITA Task Context//EN" 
+"contextSection.mod"                                                          >
+%contextSection-type;
+
+<!--                    Embed steps-informal module to get steps section -->
+<!ENTITY % steps-informalSection-type   PUBLIC 
+"-//OASIS//ELEMENTS LW DITA Task Steps//EN" 
+"steps-informalSection.mod"                                                          >
+%steps-informalSection-type;
+
+<!--                    Embed result module to get result section -->
+<!ENTITY % resultSection-type   PUBLIC 
+"-//OASIS//ELEMENTS LW DITA Task Result//EN" 
+"resultSection.mod"                                                          >
+%resultSection-type;
+
+<!--                    Embed example module to get example -->
+<!ENTITY % exampleSection-type   PUBLIC 
+"-//OASIS//ELEMENTS LW DITA Topic Example//EN" 
+"exampleSection.mod"                                                          >
+%exampleSection-type;
+
+<!--                    Embed postreq module to get postreq section -->
+<!ENTITY % postreqSection-type   PUBLIC 
+"-//OASIS//ELEMENTS LW DITA Task Postreq//EN" 
+"postreqSection.mod"                                                          >
+%postreqSection-type;
+
+
+<!-- ============================================================= -->
+<!--                    INCLUDE PHRASE MODULES                     -->
+<!-- ============================================================= -->
+
+<!-- none out of the box -->
+
+
+<!-- ================== End DITA LW Task DTD  ====================== -->

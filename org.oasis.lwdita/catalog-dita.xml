@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+         prefer="public">
+
+  <public publicId="-//OASIS//DTD LW DITA Topic//EN" uri="dtd/topic.dtd"/>
+  <public publicId="-//OASIS//DTD LW DITA Map//EN" uri="dtd/map.dtd"/>
+
+  <public publicId="-//OASIS//ELEMENTS LW DITA Topic//EN" uri="dtd/topic.mod"/>
+  <public publicId="-//OASIS//ELEMENTS LW DITA Map//EN" uri="dtd/map.mod"/>
+
+
+  <public publicId="-//OASIS//ELEMENTS LW DITA Highlight Domain//EN" uri="dtd/highlightDomain.mod"/>
+
+  <public publicId="-//OASIS//ELEMENTS LW DITA Task Prereq//EN" uri="dtd/prereqSection.mod"/>
+  <public publicId="-//OASIS//ELEMENTS LW DITA Task Context//EN" uri="dtd/contextSection.mod"/>
+
+  <public publicId="-//OASIS//ELEMENTS LW DITA Task Steps//EN" uri="dtd/steps-informalSection.mod"/>
+  <public publicId="-//OASIS//ELEMENTS LW DITA Task Result//EN" uri="dtd/resultSection.mod"/>
+  <public publicId="-//OASIS//ELEMENTS LW DITA Topic Example//EN" uri="dtd/exampleSection.mod"/>
+  <public publicId="-//OASIS//ELEMENTS LW DITA Task Postreq//EN" uri="dtd/postreqSection.mod"/>
+  <public publicId="-//OASIS//ELEMENTS LW DITA Reference Syntax//EN" uri="dtd/refsynSection.mod"/>
+
+</catalog>

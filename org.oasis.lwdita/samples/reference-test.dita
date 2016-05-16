@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD LW DITA Reference//EN"
+ "reference.dtd">
+<reference id="abc123">
+<title>test</title>
+<shortdesc>test of stuff</shortdesc>
+<refbody>
+<refsyn>
+<p>and stuff</p>
+</refsyn>
+<section>
+<p>and other stuff</p>
+</section>
+</refbody>
+</reference>

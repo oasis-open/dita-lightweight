@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD LW DITA Topic//EN" "topic.dtd">
+<topic id="abc321">
+  <title>Test LW DITA topic</title>
+  <shortdesc></shortdesc>
+  <prolog></prolog>
+  <body>
+    <p>Here is a paragraph.</p>
+    <simpletable></simpletable>
+  </body>
+</topic>

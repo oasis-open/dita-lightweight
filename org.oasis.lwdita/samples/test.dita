@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD LW DITA Topic//EN"
+ "topic.dtd">
+<topic id="abc123">
+<title>test</title>
+<shortdesc>test of stuff</shortdesc>
+<body>
+<p>and stuff<b>jghjghj</b></p>
+ <object><desc>sdfsfd</desc>
+ </object>
+</body>
+</topic>

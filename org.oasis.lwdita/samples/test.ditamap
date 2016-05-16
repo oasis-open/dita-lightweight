@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD LW DITA Map//EN" "map.dtd">
+<map id="test">
+    <topicmeta>
+	    <navtitle>This is a test map</navtitle>
+    </topicmeta>
+    <topicref href="test.dita">
+        <topicmeta>
+            <navtitle>Topic test</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref href="concept-test.dita">
+        <topicmeta>
+            <navtitle>Concept test</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref href="task-test.dita">
+        <topicmeta>
+            <navtitle>Task test</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref href="reference-test.dita">
+        <topicmeta>
+            <navtitle>Reference test</navtitle>
+        </topicmeta>
+    </topicref>
+</map>
