@@ -33,7 +33,7 @@
 
 <p>Open Repository <a href="https://www.oasis-open.org/resources/open-repositories/maintainers-guide">Maintainers</a> are responsible for oversight of this project's community development activities, including evaluation of GitHub <a href="https://github.com/oasis-open/dita-lightweight/blob/master/CONTRIBUTING.md#fork-and-pull-collaboration-model">pull requests</a> and <a href="https://www.oasis-open.org/policies-guidelines/open-repositories#repositoryManagement">preserving</a> open source principles of openness and fairness. Maintainers are recognized and trusted experts who serve to implement community goals and consensus design preferences.</p>
 
-<p>Initially, the associated TC members have designated one or more persons to serve as Maintaine(r); subsequently, participating community members may select additional or substitute Maintainers, per consensus agreements.</p>
+<p>Initially, the associated TC members have designated one or more persons to serve as Maintainer(s); subsequently, participating community members may select additional or substitute Maintainers, per consensus agreements.</p>
 
 <p><b><a id="currentMaintainers">Current Maintainers of this Open Repository</a></b></p>
 
