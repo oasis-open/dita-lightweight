@@ -1,4 +1,4 @@
-# MDITA \(MarkDITA\)
+# MDITA \(MarkDITA\) Jun 9, 2016 draft
 
 ## Introduction
 
@@ -17,38 +17,11 @@ As of March 2015, most of the MDITA elements included in this article are availa
 |shortdesc|None. A simple paragraph can set the stage for a topic|
 |body|None. Determined by opening heading 1 or title block|
 |section|A Pandoc header attribute with the class “section”on a heading 2 creates a new section \(`## This is a section {.section}`\)|
-|ul|\* or + or - indicate an unordered list item: `* Element1` is the same as `+ Element1` and `- Element1`; they will all produce the following: -   Element1
+|ul|\* or + or - indicate an unordered list item: `* Element1` is the same as `+ Element1` and `- Element1`; they will all produce the following: -   Element1. List items can include both inline and block elements.|
+|ol|Numbers followed by a period \(in no particular order\) indicate an ordered list item. \(`1. Step1, 2.   Step2, 4. Step3 3. Step4 `\). List items can include both inline and block elements.|
+|pre|Fenced code blocks following "a sequence of at least three consecutive backtick characters \(\`\) or tildes \(~\)," according to the CommonMark spec. \(`This is pre-formatted code `\).
 
-List items can include both inline and block elements.
-
-|
-|ol|Numbers followed by a period \(in no particular order\) indicate an ordered list item. ```
-
- 1.   Step1
- 2.   Step2
- 4.   Step3
- 3.   Step4
-                        
-```
-
- This will generate a logically ordered list as follows: 1.  Step1
-2.  Step2
-3.  Step3
-4.  Step4
-
-List items can include both inline and block elements.
-
-|
-|pre|Fenced code blocks following "a sequence of at least three consecutive backtick characters \(\`\) or tildes \(~\)," according to the CommonMark spec. ```
-
-```
-This is pre-formatted code
-```
-```
-
-|
-|**Example:**
-
+### XDITA example:
 ```
 <topic>
 <title>The point of it all</title>
@@ -67,10 +40,8 @@ This is pre-formatted code
 </body>
 </topic>
 
-                  
 ```
-
-|**Example:**
+### MDITA example:
 
 ```
 # The point of it all
@@ -98,16 +69,10 @@ And so on
 |example|A Pandoc header 2 attribute with the class "example" \(`## This is an example {.example}`\)|
 |context|Pandoc header 2 attribute with the class "context" \(`## Context {.context}`\)|
 |prereq, postreq|Pandoc header 2 attributes with the class "prereq" \(`## Prerequisites {.prereq}`\) or "postreq" \(`## Before you go {.postreq}`\)|
-|steps-informal|Ordered list items can represent steps as follows: ```
+|steps-informal|Ordered list items can represent steps as follows: \`1.   Step1 2.   Step2 3.   Step3`\.
 
-1.   Step1
-2.   Step2
-3.   Step3
-               
+### XDITA example:
 ```
-
-|
-|**Example:**```
 <task>
 <title>How to do something</title>
 <shortdesc>Introduction to something</shortdesc>
@@ -121,10 +86,12 @@ And so on
    </ol>
 </steps-informal>
 </taskbody>
-</task>                    
+</task>
 ```
 
-|**Example:**```
+### MDITA example:
+
+```
 # How to do something {.task}
 
 Introduction to something
@@ -140,8 +107,6 @@ Be prepared to do it
 1.   Plan it
 2.   Do it
 ```
-
-|
 
 ## Inline markup
 
@@ -188,7 +153,7 @@ MDITA also uses simplified maps with Markdown-like links.
 
 -   [First concept](c-first.md)
 -   [First task](t-first.md)
-    -   [Second task](t-second.md)   
+    -   [Second task](t-second.md)
 ```
 
 ## Attributes, linking, and content reuse
@@ -200,4 +165,3 @@ MDITA also uses simplified maps with Markdown-like links.
 |href|`[Local](test.*)`, where \* can be .dita, .xml, .html, or .md `[External](http://www.example.com/test.html)`|
 |keyref|`[key]` will create a link to a keyref or topicref properly tagged as a key in a DITA map|
 |conref|Similar to [GitHub's documentation reuse practices](https://github.com/blog/1939-how-github-uses-github-to-document-github), MDITA uses YAML files to group frequently used phrases. Based on [Jekyll's data files syntax](http://jekyllrb.com/docs/datafiles/), MDITA's phrases can be referenced in individual topics as follows:`{{ site.data.conrefs.phrases.downloadfile }}`|
-
