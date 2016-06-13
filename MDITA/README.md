@@ -69,7 +69,7 @@ And so on
 |example|A Pandoc header 2 attribute with the class "example" \(`## This is an example {.example}`\)|
 |context|Pandoc header 2 attribute with the class "context" \(`## Context {.context}`\)|
 |prereq, postreq|Pandoc header 2 attributes with the class "prereq" \(`## Prerequisites {.prereq}`\) or "postreq" \(`## Before you go {.postreq}`\)|
-|steps-informal|Ordered list items can represent steps as follows: \`1.   Step1 2.   Step2 3.   Step3`\.
+|steps-informal|Ordered list items can represent steps as follows: \(`1.   Step1 2.   Step2 3.   Step3 `\) .
 
 ### XDITA example:
 ```
