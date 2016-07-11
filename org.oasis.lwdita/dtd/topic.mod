@@ -1,4 +1,3 @@
-
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
 <!-- ============================================================= -->
@@ -13,10 +12,6 @@
 <!ENTITY % ph    "ph">
 <!ENTITY % data  "data">
 <!ENTITY % fig   "fig">
-
-<!-- remove below -->
-<!ENTITY % object "object">
-
 <!ENTITY % filter-adds " ">
 
 <!-- ============================================================= -->
@@ -26,9 +21,9 @@
 <!--common content models-->
 
 <!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
-<!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
+<!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;|fn">
 
-<!ENTITY % table-blocks  "p|ul|ol|dl|pre|audio|video">
+<!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video">
 <!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig">
 
 <!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig">
@@ -239,7 +234,7 @@
              class CDATA "- topic/strow ">
 
 <!--                    LONG NAME: Table cell -->
-<!ELEMENT stentry (%table-blocks;)*        >
+<!ELEMENT stentry (%simple-blocks;)*        >
 <!ATTLIST stentry
              %localization;
              %filters;
@@ -251,26 +246,6 @@
                      plus (image|data|xref)) -->
 <!ATTLIST fig    %fig.attributes;
                  class CDATA "- topic/fig " >
-
-
-
-<!-- {{mg:}} object will be removed very soon -->
-<!--                    LONG NAME: Object-->
-<!ELEMENT object (desc?, param*)        >
-<!ATTLIST object
-             data CDATA #IMPLIED
-             type CDATA #IMPLIED
-             height     NMTOKEN                          #IMPLIED
-             width      NMTOKEN                          #IMPLIED
-             name CDATA #IMPLIED
-             usemap CDATA #IMPLIED
-             %localization;
-             %filters;
-             %reuse;
-             class CDATA "- topic/object ">
-
-
-
 
 
 <!--                    LONG NAME: Description  -->
@@ -383,5 +358,14 @@
              value      CDATA           #IMPLIED
              class CDATA "- topic/param h5m-d/track ">
 
-
+<!--                    LONG NAME: Footnote  -->
+<!-- TODO: add note to fn content model later -->
+<!ELEMENT fn ( #PCDATA|dl|%fig;|image|ol|p|pre|ul|%ph;|xref|%data; )*  >
+<!ATTLIST fn
+             %localization;
+             callout     CDATA          #IMPLIED
+             outputclass CDATA          #IMPLIED
+             id          NMTOKEN        #IMPLIED
+             class       CDATA "- topic/fn ">
+             
 
