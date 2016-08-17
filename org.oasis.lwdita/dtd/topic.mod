@@ -18,25 +18,26 @@
 <!--                    COMMON DECLARATIONS                        -->
 <!-- ============================================================= -->
 
-<!--common content models-->
+<!-- common content models -->
 
 <!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
-<!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;|fn">
-
-<!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video">
-<!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig">
-
+<!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
+<!-- TODO: add <note> to simple-blocks later -->
+<!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn">
+<!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn">
 <!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig">
-
 <!ENTITY % fig-blocks  "p|ul|ol|dl|pre|audio|video|simpletable"> 
 
-<!--common attributes-->
+<!-- common attributes -->
 <!ENTITY % filters
             'props      CDATA                              #IMPLIED
              %filter-adds;                          ' >
 <!ENTITY % reuse
             'id      NMTOKEN                            #IMPLIED
              conref  CDATA                              #IMPLIED  ' >
+<!-- %fn-reuse; used for <fn> only, so you can remove this if you want -->
+<!ENTITY % fn-reuse
+            'conref  CDATA                              #IMPLIED  ' >
 <!ENTITY % variable-content
             'keyref      CDATA                            #IMPLIED '>
 <!ENTITY % variable-links
@@ -268,10 +269,6 @@
              %variable-content;
              class CDATA "- topic/ph ">
 
-
-
-
-
 <!--                    LONG NAME: Image  -->
 <!ELEMENT image             (alt?)        >
 <!ATTLIST image
@@ -306,7 +303,6 @@
              %localization;
              %variable-links;
              class CDATA "- topic/xref ">       
-
 
 
 <!--                    LONG NAME: Audio -->
@@ -360,12 +356,17 @@
 
 <!--                    LONG NAME: Footnote  -->
 <!-- TODO: add note to fn content model later -->
-<!ELEMENT fn ( #PCDATA|dl|%fig;|image|ol|p|pre|ul|%ph;|xref|%data; )*  >
+<!ELEMENT fn ( %simple-blocks; )*  >
+    <!--% simple-blocks  "p|ul|ol|dl|pre|audio|video|fn" (plus note later) -->
 <!ATTLIST fn
              %localization;
+             %filters;
+             %fn-reuse;
              callout     CDATA          #IMPLIED
              outputclass CDATA          #IMPLIED
-             id          NMTOKEN        #IMPLIED
+             id          NMTOKEN        #REQUIRED
              class       CDATA "- topic/fn ">
-             
 
+<!-- to add: -->
+<!-- fnref - new inline element -->
+<!-- spec* - template specialization -->

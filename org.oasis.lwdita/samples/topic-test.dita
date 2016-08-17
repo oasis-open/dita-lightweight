@@ -6,6 +6,10 @@
   <prolog></prolog>
   <body>
     <p>Here is a <b>paragraph</b>.</p>
+    <fn id="myid"><p>footnote content</p></fn>
+
+    <pre>Here is some pre text. </pre>
+    <fn id="myid2"></fn>
     <ul>
       <li><p>Here is a list item.</p></li>
       <li><p>Here is a list item.</p>
