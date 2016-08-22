@@ -5,6 +5,7 @@
   <shortdesc>Here is a shortdesc.</shortdesc>
   <prolog></prolog>
   <body>
+    <note></note>
     <p>Here is a <b>paragraph</b>.</p>
     <fn id="myid"><p>footnote content</p></fn>
 

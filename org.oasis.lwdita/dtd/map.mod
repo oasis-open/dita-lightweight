@@ -87,10 +87,10 @@
 <!ELEMENT topicref	(topicmeta?, topicref*)        >
 <!ATTLIST topicref
              locktitle CDATA      			 #FIXED 'yes'
-	     %reuse;
+	           %reuse;
              %filters;
              %reference-content;
-	     %control-variables; 
+	           %control-variables; 
              %variable-links;
              class CDATA "- map/topicref ">       
 

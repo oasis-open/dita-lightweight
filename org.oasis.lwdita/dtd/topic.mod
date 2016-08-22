@@ -22,9 +22,8 @@
 
 <!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
 <!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
-<!-- TODO: add <note> to simple-blocks later -->
-<!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn">
-<!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn">
+<!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn|note">
+<!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn|note">
 <!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig">
 <!ENTITY % fig-blocks  "p|ul|ol|dl|pre|audio|video|simpletable"> 
 
@@ -355,9 +354,7 @@
              class CDATA "- topic/param h5m-d/track ">
 
 <!--                    LONG NAME: Footnote  -->
-<!-- TODO: add note to fn content model later -->
 <!ELEMENT fn ( %simple-blocks; )*  >
-    <!--% simple-blocks  "p|ul|ol|dl|pre|audio|video|fn" (plus note later) -->
 <!ATTLIST fn
              %localization;
              %filters;
@@ -366,6 +363,17 @@
              outputclass CDATA          #IMPLIED
              id          NMTOKEN        #REQUIRED
              class       CDATA "- topic/fn ">
+
+<!--                    LONG NAME: Note  -->
+<!ELEMENT note ( %simple-blocks; )*  >
+<!ATTLIST note 
+             %localization;
+             %filters;
+             %reuse;
+             type (caution|warning|danger|trouble|notice|note) "note" 
+             outputclass  CDATA          #IMPLIED
+             class        CDATA "- topic/note "
+             >
 
 <!-- to add: -->
 <!-- fnref - new inline element -->
