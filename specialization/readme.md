@@ -32,17 +32,17 @@
 
 ~~~
 <topic id="xyz" outputclass="meeting-notes">
-<prolog>
-<specmeta conref="domains/dates.dita#dm/dates"/>
-</prolog>
-<body outputclass="meeting-notes-body">
-<section outputclass="todos" specmodel="sequence">
-<title specrole="generated">To dos</title>
-<p specrole="doc">Use the todos element to organize a list of things you need to do</p>
-<ul>
-  <li>Here's an example todo</li>
-</ul>
-</section>
-</body>
+ <prolog>
+  <specmeta conref="domains/dates.dita#dm/dates"/>
+ </prolog>
+ <body outputclass="meeting-notes-body">
+  <section outputclass="todos" specmodel="sequence">
+   <title specrole="generated">To dos</title>
+   <p specrole="doc">Use the todos element to organize a list of things you need to do</p>
+   <ul>
+     <li>Here's an example todo</li>
+   </ul>
+  </section>
+ </body>
 </topic>
 ~~~
