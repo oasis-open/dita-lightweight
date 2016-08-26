@@ -1,4 +1,4 @@
-# Template-based specialization
+# LwDITA template-based specialization
 
 - Create an instance of of parent type
 - Annotate the instance to define model
