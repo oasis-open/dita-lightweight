@@ -29,7 +29,7 @@
 
 <!-- common attributes -->
 <!ENTITY % filters
-            'props      CDATA                              #IMPLIED
+            'props      CDATA                           #IMPLIED
              %filter-adds;                          ' >
 <!ENTITY % reuse
             'id      NMTOKEN                            #IMPLIED
@@ -38,49 +38,27 @@
 <!ENTITY % fn-reuse
             'conref  CDATA                              #IMPLIED  ' >
 <!ENTITY % variable-content
-            'keyref      CDATA                            #IMPLIED '>
+            'keyref      CDATA                          #IMPLIED '>
 <!ENTITY % variable-links
-            'keyref      CDATA                            #IMPLIED '>
+            'keyref      CDATA                          #IMPLIED '>
 <!ENTITY % localization
-            'dir         CDATA                              #IMPLIED
-             xml:lang    CDATA                              #IMPLIED
-             translate   CDATA                            #IMPLIED '>
-
+            'dir         CDATA                          #IMPLIED
+             xml:lang    CDATA                          #IMPLIED
+             translate   CDATA                          #IMPLIED '>
 <!ENTITY % display-atts 
-             "scale 
-                        (50 |
-                         60 |
-                         70 |
-                         80 |
-                         90 |
-                         100 |
-                         110 |
-                         120 |
-                         140 |
-                         160 |
-                         180 |
-                         200 )
-                                  #IMPLIED
-              frame 
-                        (all |
-                         bottom |
-                         none | 
-                         sides | 
-                         top | 
-                         topbot ) 
-                                  #IMPLIED
-              expanse 
-                        (column | 
-                         page |
-                         spread | 
-                         textline ) 
-                                  #IMPLIED"
->
+             "scale ( 50|60|70|80|90|100|110|120|140|160|180|200 ) #IMPLIED
+              frame ( all|bottom|none|sides|top|topbot )           #IMPLIED
+              expanse ( column|page|spread|textline )              #IMPLIED">
 <!ENTITY % fig.attributes
              "%display-atts;
               %localization;
-              outputclass CDATA #IMPLIED"
->
+              outputclass CDATA #IMPLIED">
+<!-- Specialization template attributes -->
+<!ENTITY % spec-atts
+             "specmodel (sequence|choice|inherit) 'inherit'
+              specrole NMTOKENS 'editable'
+              importance (required|optional) #IMPLIED">
+             <!-- @specrole values: doc, generate, modelonly, prompt, editable -->
 
 
 <!-- ============================================================= -->
@@ -88,47 +66,57 @@
 <!-- ============================================================= -->
 
 <!--                    LONG NAME: Topic  -->
-<!ELEMENT topic         (title, shortdesc?, prolog?, body)  >
+<!ELEMENT topic   (title, shortdesc?, prolog?, body)  >
 <!ATTLIST topic
-             id         ID                                 #REQUIRED
+             id       ID          #REQUIRED
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/" 
-	     ditaarch:DITAArchVersion CDATA "1.3"
-             domains    CDATA                    "&included-domains;"
+	           ditaarch:DITAArchVersion CDATA "1.3"
+             domains  CDATA       "&included-domains;"
+             outputclass  CDATA    #IMPLIED
              %localization;
+             %spec-atts;
              class CDATA "- topic/topic ">
 
 <!--                    LONG NAME: Title -->
 <!ELEMENT title (%common-inline;)* >
 <!ATTLIST title
              %localization;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/title ">
  
-
-
 <!--                    LONG NAME: Short description-->
 <!ELEMENT shortdesc     (%all-inline;)* >
 <!ATTLIST shortdesc  
              %localization;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/shortdesc ">
  
 <!--                    LONG NAME: Prolog-->
-<!ELEMENT prolog (%data;)* >
+<!ELEMENT prolog (%data;|specmeta)* >
 <!ATTLIST prolog
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/prolog ">
  
 
-<!--                    LONG NAME: Body                            -->
+<!--                    LONG NAME: Body                  -->
 <!ELEMENT body          ((%all-blocks;)*, section*)        >
 <!ATTLIST body   
              %localization;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/body ">
 
-<!--                    LONG NAME: Section                         -->
+<!--                    LONG NAME: Section             -->
 <!ELEMENT section       (title?, (%all-blocks;)*)        >
 <!ATTLIST section
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/section ">
 
 <!--                    LONG NAME: Paragraph  -->
@@ -137,6 +125,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/p ">
 
 
@@ -146,6 +136,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/ul ">
 
 <!--                    LONG NAME: Ordered list  -->
@@ -154,6 +146,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/ol ">
 
 
@@ -163,6 +157,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/li ">
 
 <!--                    LONG NAME: Description list -->
@@ -171,6 +167,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dl ">
 
 <!--                    LONG NAME: Description entry -->
@@ -179,6 +177,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dlentry ">
 
 <!--                    LONG NAME: Description term  -->
@@ -187,6 +187,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dt ">
 
 <!--                    LONG NAME: Description   -->
@@ -195,6 +197,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dd ">
 
 
@@ -205,6 +209,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/pre ">
 
 
@@ -214,6 +220,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/simpletable ">
 
 
@@ -223,6 +231,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/sthead ">
 
 <!--                    LONG NAME: Table row -->
@@ -231,6 +241,8 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/strow ">
 
 <!--                    LONG NAME: Table cell -->
@@ -239,19 +251,25 @@
              %localization;
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/stentry ">
 
 <!ELEMENT fig   (title?, desc?, (%fig-blocks;|image|data|xref)*)    >
                 <!-- fig-blocks: "p|ul|ol|dl|pre|audio|video|simpletable">
                      plus (image|data|xref)) -->
-<!ATTLIST fig    %fig.attributes;
-                 class CDATA "- topic/fig " >
+<!ATTLIST fig
+             %fig.attributes;
+             %spec-atts;
+             class CDATA "- topic/fig " >
 
 
 <!--                    LONG NAME: Description  -->
 <!ELEMENT desc		(%common-inline;)*        >
 <!ATTLIST desc
              %localization;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/desc ">
 
 <!--                    LONG NAME: Object parameter  -->
@@ -259,6 +277,8 @@
 <!ATTLIST param	
              name       CDATA                            #REQUIRED
              value      CDATA                            #IMPLIED
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/param ">
 
 <!--                    LONG NAME: Phrase content  -->
@@ -266,6 +286,8 @@
 <!ATTLIST ph
              %localization;
              %variable-content;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/ph ">
 
 <!--                    LONG NAME: Image  -->
@@ -276,6 +298,8 @@
              width      NMTOKEN                          #IMPLIED
              %localization;
              %variable-content;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/image ">
 
 <!--                    LONG NAME: Alternative content  -->
@@ -283,6 +307,8 @@
 <!ATTLIST alt           
              %localization;
              %variable-content;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/alt ">
 
 <!--                    LONG NAME: Data  -->
@@ -290,7 +316,10 @@
 <!ATTLIST data
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
+             href       CDATA                            #IMPLIED
              %variable-content;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
 
 <!--                    LONG NAME: Reference  -->
@@ -301,6 +330,8 @@
              scope      (local | peer | external)        #IMPLIED
              %localization;
              %variable-links;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/xref ">       
 
 
@@ -309,6 +340,8 @@
 <!ATTLIST audio
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/object h5m-d/audio ">
 
 <!--                    LONG NAME: Video -->
@@ -316,19 +349,24 @@
 <!ATTLIST video
              %filters;
              %reuse;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/object h5m-d/video ">
 
 <!--                    LONG NAME: Fallback -->
 <!ELEMENT fallback		(%common-inline;)*        >
 <!ATTLIST fallback
              %localization;
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/desc h5m-d/fallback ">
 
 <!--                    LONG NAME: Display controls  -->
 <!ELEMENT controls 	EMPTY        >
 <!ATTLIST controls
              name       CDATA   			#FIXED "controls"
-             
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/controls ">
 <!-- value      CDATA         (y|n)  "y" -->
 
@@ -337,21 +375,27 @@
 <!ATTLIST poster	
              name       CDATA         #FIXED "poster"
              value      CDATA         #IMPLIED
-             class CDATA "- topic/param h5m-d/poster ">
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
+             class CDATA "+ topic/param h5m-d/poster ">
 
 <!--                    LONG NAME: Source  -->
 <!ELEMENT source		EMPTY        >
 <!ATTLIST source	
              name       CDATA           #FIXED "source"
              value      CDATA           #IMPLIED
-             class CDATA "- topic/param h5m-d/source ">
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
+             class CDATA "+ topic/param h5m-d/source ">
 
 <!--                    LONG NAME: Track for captions  -->
 <!ELEMENT track		EMPTY        >
 <!ATTLIST track	
              name       CDATA           #FIXED "track"
              value      CDATA           #IMPLIED
-             class CDATA "- topic/param h5m-d/track ">
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
+             class CDATA "+ topic/param h5m-d/track ">
 
 <!--                    LONG NAME: Footnote  -->
 <!ELEMENT fn ( %simple-blocks; )*  >
@@ -360,6 +404,7 @@
              %filters;
              %fn-reuse;
              callout     CDATA          #IMPLIED
+             %spec-atts;
              outputclass CDATA          #IMPLIED
              id          NMTOKEN        #REQUIRED
              class       CDATA "- topic/fn ">
@@ -370,11 +415,36 @@
              %localization;
              %filters;
              %reuse;
-             type (caution|warning|danger|trouble|notice|note) "note" 
+             type (caution|warning|danger|trouble|notice|note) "note"
+             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class        CDATA "- topic/note "
              >
 
+<!ELEMENT specmeta ( data|ph|specatt )*  >
+<!ATTLIST specmeta 
+             class        CDATA "+ topic/data ">
+
+<!ELEMENT specatt ( #PCDATA )  >
+<!ATTLIST specatt 
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
+             class        CDATA "+ topic/props ">
+
 <!-- to add: -->
-<!-- fnref - new inline element -->
 <!-- spec* - template specialization -->
+<!-- 
+xx@specmodel - define a sequence or choice group. if nothing then same as 
+             base element./sequence, choice, inherit (default)
+xx@importance - required or optional, default required in a sequence, 
+              default optional in a choice
+xx@specrole - values: doc, generate, modelonly, prompt, editable
+
+xx specmeta - data|ph|specatt*
+xxspecatt - specializations of @props
+
+
+xx@outputclass - intended element name. needed pretty much everywhere.
+xx@href - add to data element
+-->
+<!-- fnref - new inline element -->

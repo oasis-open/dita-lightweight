@@ -9,5 +9,5 @@
       <navtitle>My nav title</navtitle>
     </topicmeta>
   </topicref>
-  <topicref></topicref>
+  <topicref keys="mykey"/>
 </map>
