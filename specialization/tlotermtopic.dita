@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tlotermtopic.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<tlotermtopic id="someID">
+  <tloterm>Empty of text.</tloterm>
+  <prolog>
+    <tlotermauthor></tlotermauthor>
+  </prolog>
+  <tlotermbody>
+    <tlowhat>
+      <title></title>
+      <p></p>
+      <note></note>
+    </tlowhat>
+    <tlowhy>
+      <title></title>
+      <p></p>
+      <simpletable>
+        <strow><stentry></stentry></strow>
+      </simpletable>
+    </tlowhy>
+    <tloessay>
+      <title></title>
+      <p></p>
+    </tloessay>
+    <tlosummary>
+      <title></title>
+      <p></p>
+    </tlosummary>
+  </tlotermbody>
+</tlotermtopic>
