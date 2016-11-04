@@ -6,7 +6,7 @@
    <define name="tlophrase">
       <element name="tlophrase">
          <optional>
-            <attribute name="class" a:defaultValue="+ topic/ph tlotermtopic/tlophrase "/>
+            <attribute name="class" a:defaultValue="+ topic/ph /tlophrase "/>
          </optional>
          <ref name="ph.attributes"/>
          <ref name="ph.content"/>
@@ -25,7 +25,7 @@
    <define name="tlodata">
       <element name="tlodata">
          <optional>
-            <attribute name="class" a:defaultValue="+ topic/data tlotermtopic/tlodata "/>
+            <attribute name="class" a:defaultValue="+ topic/data /tlodata "/>
          </optional>
          <ref name="data.attributes"/>
          <ref name="data.content"/>
@@ -36,75 +36,79 @@
          <ref name="tlodata"/>
       </choice>
    </define>
-   <define name="props-attribute-extensions" combine="interleave">
+   <define name="filter-atts" combine="interleave">
       <optional>
          <attribute name="tloatt"/>
       </optional>
    </define>
-   <start combine="choice"><!--WARNING: @specmodel cannot be equal to 'inherit' if specialized element contains other specialized elements.--><!--Treating @specmodel attribute as having value 'sequence'.-->
+   <start combine="choice">
       <element name="tlotermtopic">
          <optional>
-            <attribute name="class" a:defaultValue="- topic/topic tlotermtopic/tlotermtopic "/>
+            <attribute name="class" a:defaultValue="- topic/topic /tlotermtopic "/>
          </optional>
          <ref name="topic.attributes"/>
-         <!--WARNING: @specmodel cannot be equal to 'inherit' if specialized element contains other specialized elements.-->
+         <!--WARNING: @specmodel should not be set to "inherit" on <topic>, since its base element has a content model of sequence and <tlotermtopic> has specialized child elements.-->
          <!--Treating @specmodel attribute as having value 'sequence'.-->
          <element name="tloterm">
             <optional>
-               <attribute name="class" a:defaultValue="- topic/title tlotermtopic/tloterm "/>
+               <attribute name="class" a:defaultValue="- topic/title /tloterm "/>
             </optional>
             <ref name="title.attributes"/>
             <ref name="title.content"/>
          </element>
-         <element name="prolog">
-            <ref name="prolog.attlist"/>
-            <element name="tlotermauthor">
-               <optional>
-                  <attribute name="class" a:defaultValue="- topic/data tlotermtopic/tlotermauthor "/>
-               </optional>
-               <ref name="data.attributes"/>
-               <ref name="data.content"/>
+         <optional>
+            <element name="prolog">
+               <ref name="prolog.attlist"/>
+               <element name="tlotermauthor">
+                  <optional>
+                     <attribute name="class" a:defaultValue="- topic/data /tlotermauthor "/>
+                  </optional>
+                  <ref name="data.attributes"/>
+                  <ref name="data.content"/>
+               </element>
             </element>
-         </element>
-         <element name="tlotermbody">
-            <optional>
-               <attribute name="class" a:defaultValue="- topic/body tlotermtopic/tlotermbody "/>
-            </optional>
-            <ref name="body.attributes"/>
-            <zeroOrMore>
-               <choice>
-                  <element name="tlowhat">
-                     <optional>
-                        <attribute name="class" a:defaultValue="- topic/section tlotermtopic/tlowhat "/>
-                     </optional>
-                     <ref name="section.attributes"/>
-                     <ref name="section.content"/>
-                  </element>
-                  <element name="tlowhy">
-                     <optional>
-                        <attribute name="class" a:defaultValue="- topic/section tlotermtopic/tlowhy "/>
-                     </optional>
-                     <ref name="section.attributes"/>
-                     <ref name="section.content"/>
-                  </element>
-                  <element name="tloessay">
-                     <optional>
-                        <attribute name="class" a:defaultValue="- topic/section tlotermtopic/tloessay "/>
-                     </optional>
-                     <ref name="section.attributes"/>
-                     <ref name="section.content"/>
-                  </element>
-                  <element name="tlosummary">
-                     <optional>
-                        <attribute name="class" a:defaultValue="- topic/section tlotermtopic/tlosummary "/>
-                     </optional>
-                     <ref name="section.attributes"/>
+         </optional>
+         <optional>
+            <element name="tlotermbody">
+               <optional>
+                  <attribute name="class" a:defaultValue="- topic/body /tlotermbody "/>
+               </optional>
+               <ref name="body.attributes"/>
+               <!--WARNING: @specmodel should not be set to "choice" on <body>, since its base element has a content model of sequence.-->
+               <!--Treating @specmodel attribute as having value 'sequence'.-->
+               <element name="tlowhat">
+                  <optional>
+                     <attribute name="class" a:defaultValue="- topic/section /tlowhat "/>
+                  </optional>
+                  <ref name="section.attributes"/>
+                  <ref name="section.content"/>
+               </element>
+               <element name="tlowhy">
+                  <optional>
+                     <attribute name="class" a:defaultValue="- topic/section /tlowhy "/>
+                  </optional>
+                  <ref name="section.attributes"/>
+                  <ref name="section.content"/>
+               </element>
+               <element name="tloessay">
+                  <optional>
+                     <attribute name="class" a:defaultValue="- topic/section /tloessay "/>
+                  </optional>
+                  <ref name="section.attributes"/>
+                  <ref name="section.content"/>
+               </element>
+               <element name="tlosummary">
+                  <optional>
+                     <attribute name="class" a:defaultValue="- topic/section /tlosummary "/>
+                  </optional>
+                  <ref name="section.attributes"/>
+                  <optional>
                      <ref name="title"/>
-                     <ref name="p"/>
-                  </element>
-               </choice>
-            </zeroOrMore>
-         </element>
+                  </optional>
+                  <ref name="p"/>
+               </element>
+            </element>
+         </optional>
       </element>
    </start>
 </grammar>

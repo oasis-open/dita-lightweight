@@ -76,7 +76,6 @@ UPDATES:
       </define>
 
     </include>
-    <include href="highlightDomain.rng"/>
   </div>
   <div>
     <a:documentation>ID-DEFINING-ELEMENT OVERRIDES</a:documentation>

@@ -137,6 +137,7 @@ ORIGINAL CREATION DATE:
     <include href="commonElementsMod.rng">
       <a:documentation>Content elements common to map and topic</a:documentation>
     </include>
+    <include href="highlightDomain.rng"/>
     <define name="body.cnt">
 
       <choice>
@@ -221,6 +222,7 @@ ORIGINAL CREATION DATE:
         </attribute>
         <ref name="conref-atts"/>
         <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -257,6 +259,8 @@ ORIGINAL CREATION DATE:
       <define name="shortdesc.attributes">
         <ref name="univ-atts"/>
         <ref name="spec-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -284,6 +288,8 @@ ORIGINAL CREATION DATE:
       <define name="body.attributes">
         <ref name="univ-atts"/>
         <ref name="spec-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -309,10 +315,9 @@ ORIGINAL CREATION DATE:
 
       </define>
       <define name="section.attributes">
-        <optional>
-          <attribute name="spectitle"/>
-        </optional>
         <ref name="univ-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -348,6 +353,10 @@ ORIGINAL CREATION DATE:
         <define name="prolog.attributes">
           <ref name="univ-atts"/>
           <ref name="spec-atts"/>
+          <ref name="filter-atts"/>
+          <optional>
+            <attribute name="outputclass"/>
+          </optional>
         </define>
         <define name="prolog.element">
           <element name="prolog" dita:longName="prolog">

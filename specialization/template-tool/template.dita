@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD LW DITA Topic//EN" "topic.dtd">
+<?xml-model href="topic.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <topic id="termdef_term" outputclass="tlotermtopic">
   <title outputclass="tloterm">Structured Content</title>
-  <prolog>
+  <prolog importance="optional">
     <data outputclass="tlotermauthor" specrole="prompt" value="author name here"/>
     <specmeta>
       <ph outputclass="tlophrase" specrole="doc">A new global phrase element</ph>
@@ -12,7 +12,7 @@
       <specatt outputclass="tloatt" specrole="doc"/>
     </specmeta>
   </prolog>
-  <body outputclass="tlotermbody" specmodel="choice">
+  <body outputclass="tlotermbody" specmodel="choice" importance="optional">
     <section outputclass="tlowhat">
       <title specrole="generate">What is it?</title>
       <p>...</p>
@@ -33,7 +33,7 @@
       <p>...</p>
     </section>
     <section outputclass="tlosummary" specmodel="sequence">
-      <title specrole="generate">Summary:</title>
+      <title specrole="generate" importance="optional">Summary:</title>
       <p>...</p>
     </section>
   </body>

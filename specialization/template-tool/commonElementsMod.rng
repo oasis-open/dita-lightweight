@@ -4,7 +4,7 @@
 <grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
     <moduleTitle>DITA Common Elements</moduleTitle>
-    <headerComment></headerComment>
+    <headerComment/>
     <moduleMetadata>
       <moduleType>base</moduleType>
       <moduleShortName>commonElements</moduleShortName>
@@ -293,7 +293,7 @@
         </choice>
       </define>
       <define name="note.cnt">
-          <ref name="simple.basic.block"/>
+        <ref name="simple.basic.block"/>
       </define>
       <define name="desc.cnt">
         <choice>
@@ -312,7 +312,7 @@
         </choice>
       </define>
       <define name="fn.cnt">
-          <ref name="simple.basic.block"/>
+        <ref name="simple.basic.block"/>
       </define>
       <define name="defn.cnt">
         <ref name="list.block"/>
@@ -490,7 +490,6 @@
     </define>
     <define name="univ-atts">
       <ref name="id-atts"/>
-      <ref name="localization-atts"/>
     </define>
     <define name="spec-atts">
       <optional>
@@ -569,6 +568,7 @@
       </define>
       <define name="data.attributes">
         <ref name="data-element-atts"/>
+        <ref name="filter-atts"/>
         <ref name="spec-atts"/>
       </define>
       <define name="data.element">
@@ -680,6 +680,8 @@
       <define name="desc.attributes">
         <ref name="univ-atts"/>
         <ref name="spec-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -710,6 +712,8 @@
       </define>
       <define name="p.attributes">
         <ref name="univ-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -735,6 +739,8 @@
         </zeroOrMore>
       </define>
       <define name="note.attributes">
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="type">
@@ -755,9 +761,6 @@
               <value>-dita-use-conref-target</value>
             </choice>
           </attribute>
-        </optional>
-        <optional>
-          <attribute name="spectitle"/>
         </optional>
         <optional>
           <attribute name="othertype"/>
@@ -782,29 +785,14 @@
     <div>
       <a:documentation>LONG NAME: Unordered List</a:documentation>
       <define name="ul.content">
-        <zeroOrMore dita:since="1.3">
-          <choice>
-            <ref name="data"/>
-          </choice>
-        </zeroOrMore>
         <oneOrMore>
           <ref name="li"/>
         </oneOrMore>
       </define>
       <define name="ul.attributes">
-        <optional>
-          <attribute name="compact">
-            <choice>
-              <value>no</value>
-              <value>yes</value>
-              <value>-dita-use-conref-target</value>
-            </choice>
-          </attribute>
-        </optional>
-        <optional>
-          <attribute name="spectitle"/>
-        </optional>
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -830,29 +818,14 @@
     <div>
       <a:documentation>LONG NAME: Ordered List</a:documentation>
       <define name="ol.content">
-        <zeroOrMore dita:since="1.3">
-          <choice>
-            <ref name="data"/>
-          </choice>
-        </zeroOrMore>
         <oneOrMore>
           <ref name="li"/>
         </oneOrMore>
       </define>
       <define name="ol.attributes">
-        <optional>
-          <attribute name="compact">
-            <choice>
-              <value>no</value>
-              <value>yes</value>
-              <value>-dita-use-conref-target</value>
-            </choice>
-          </attribute>
-        </optional>
-        <optional>
-          <attribute name="spectitle"/>
-        </optional>
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -879,6 +852,8 @@
       </define>
       <define name="li.attributes">
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -905,19 +880,9 @@
         </oneOrMore>
       </define>
       <define name="dl.attributes">
-        <optional>
-          <attribute name="compact">
-            <choice>
-              <value>no</value>
-              <value>yes</value>
-              <value>-dita-use-conref-target</value>
-            </choice>
-          </attribute>
-        </optional>
-        <optional>
-          <attribute name="spectitle"/>
-        </optional>
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -948,6 +913,8 @@
       </define>
       <define name="dlentry.attributes">
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -980,6 +947,8 @@
           <attribute name="keyref"/>
         </optional>
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1006,6 +975,8 @@
       </define>
       <define name="dd.attributes">
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1033,17 +1004,14 @@
           <ref name="desc"/>
         </optional>
         <zeroOrMore>
-          
-            <ref name="fig.cnt"/>
-          
+          <ref name="fig.cnt"/>
         </zeroOrMore>
       </define>
       <define name="fig.attributes">
         <ref name="display-atts"/>
-        <optional>
-          <attribute name="spectitle"/>
-        </optional>
         <ref name="univ-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1072,14 +1040,13 @@
       <define name="pre.attributes">
         <ref name="display-atts"/>
         <optional>
-          <attribute name="spectitle"/>
-        </optional>
-        <optional>
           <attribute name="xml:space" a:defaultValue="preserve">
             <value>preserve</value>
           </attribute>
         </optional>
         <ref name="univ-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1115,7 +1082,9 @@
           <attribute name="keyref"/>
         </optional>
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
+        <ref name="filter-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -1144,6 +1113,7 @@
       </define>
       <define name="fallback.attributes">
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1317,6 +1287,8 @@
         </optional>
         <ref name="univ-atts"/>
         <ref name="spec-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -1350,6 +1322,8 @@
       <define name="alt.attributes">
         <ref name="univ-atts"/>
         <ref name="spec-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -1375,6 +1349,7 @@
       <define name="param.attributes">
         <ref name="univ-atts"/>
         <ref name="spec-atts"/>
+        <ref name="filter-atts"/>
         <attribute name="name"/>
         <optional>
           <attribute name="value"/>
@@ -1434,10 +1409,9 @@
           </attribute>
         </optional>
         <ref name="display-atts"/>
-        <optional>
-          <attribute name="spectitle"/>
-        </optional>
         <ref name="univ-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1466,6 +1440,8 @@
       </define>
       <define name="sthead.attributes">
         <ref name="univ-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1492,6 +1468,8 @@
       </define>
       <define name="strow.attributes">
         <ref name="univ-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1521,6 +1499,8 @@
           <attribute name="specentry"/>
         </optional>
         <ref name="univ-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1551,6 +1531,8 @@
           <attribute name="callout"/>
         </optional>
         <ref name="univ-atts"/>
+        <ref name="filter-atts"/>
+        <ref name="localization-atts"/>
         <ref name="spec-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1605,6 +1587,8 @@
         </optional>
         <ref name="univ-atts"/>
         <ref name="spec-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="filter-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -1640,7 +1624,7 @@
       <a:documentation>LONG NAME: Specatt</a:documentation>
       <define name="specatt.content">
         <zeroOrMore>
-            <ref name="specmeta.cnt"/>
+          <ref name="specmeta.cnt"/>
         </zeroOrMore>
       </define>
       <define name="specatt.attributes">
