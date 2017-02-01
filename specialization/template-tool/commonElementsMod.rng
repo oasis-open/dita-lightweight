@@ -130,13 +130,11 @@
         <choice>
           <ref name="ph"/>
           <ref name="xref"/>
-          <ref name="image"/>
         </choice>
       </define>
       <define name="small.basic.ph">
         <choice>
           <ref name="ph"/>
-          <ref name="image"/>
         </choice>
       </define>
       <define name="basic.block">
@@ -335,6 +333,9 @@
           <ref name="pre"/>
           <ref name="audio"/>
           <ref name="video"/>
+          <ref name="image"/>
+          <ref name="data"/>
+          <ref name="xref"/>
         </choice>
       </define>
       <define name="data.cnt">
@@ -1315,7 +1316,6 @@
             <text/>
             <ref name="small.basic.ph"/>
             <ref name="data.elements.incl"/>
-            <ref name="image"/>
           </choice>
         </zeroOrMore>
       </define>
