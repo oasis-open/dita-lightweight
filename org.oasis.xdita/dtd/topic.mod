@@ -4,7 +4,7 @@
 
 <!ENTITY included-domains "">
 <!ENTITY excluded-attributes "">
-  
+
 <!-- ============================================================= -->
 <!--                    EXTENSION POINTS                           -->
 <!-- ============================================================= -->
@@ -24,8 +24,8 @@
 <!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
 <!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn|note">
 <!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn|note">
-<!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig">
-<!ENTITY % fig-blocks  "p|ul|ol|dl|pre|audio|video|simpletable"> 
+<!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig|note">
+<!ENTITY % fig-blocks  "p|ul|ol|dl|pre|audio|video|simpletable">
 
 <!-- common attributes -->
 <!ENTITY % filters
@@ -45,7 +45,7 @@
             'dir         CDATA                          #IMPLIED
              xml:lang    CDATA                          #IMPLIED
              translate   CDATA                          #IMPLIED '>
-<!ENTITY % display-atts 
+<!ENTITY % display-atts
              "scale ( 50|60|70|80|90|100|110|120|140|160|180|200 ) #IMPLIED
               frame ( all|bottom|none|sides|top|topbot )           #IMPLIED
               expanse ( column|page|spread|textline )              #IMPLIED">
@@ -69,7 +69,7 @@
 <!ELEMENT topic   (title, shortdesc?, prolog?, body)  >
 <!ATTLIST topic
              id       ID          #REQUIRED
-             xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/" 
+             xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
 	           ditaarch:DITAArchVersion CDATA "1.3"
              domains  CDATA       "&included-domains;"
              outputclass  CDATA    #IMPLIED
@@ -84,26 +84,26 @@
              %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/title ">
- 
+
 <!--                    LONG NAME: Short description-->
 <!ELEMENT shortdesc     (%all-inline;)* >
-<!ATTLIST shortdesc  
+<!ATTLIST shortdesc
              %localization;
              %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/shortdesc ">
- 
+
 <!--                    LONG NAME: Prolog-->
 <!ELEMENT prolog (%data;|specmeta)* >
 <!ATTLIST prolog
              %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/prolog ">
- 
+
 
 <!--                    LONG NAME: Body                  -->
 <!ELEMENT body          ((%all-blocks;)*, section*)        >
-<!ATTLIST body   
+<!ATTLIST body
              %localization;
              %spec-atts;
              outputclass  CDATA          #IMPLIED
@@ -274,7 +274,7 @@
 
 <!--                    LONG NAME: Object parameter  -->
 <!ELEMENT param		EMPTY        >
-<!ATTLIST param	
+<!ATTLIST param
              name       CDATA                            #REQUIRED
              value      CDATA                            #IMPLIED
              %spec-atts;
@@ -304,7 +304,7 @@
 
 <!--                    LONG NAME: Alternative content  -->
 <!ELEMENT alt           (%common-inline;)*        >
-<!ATTLIST alt           
+<!ATTLIST alt
              %localization;
              %variable-content;
              %spec-atts;
@@ -332,7 +332,7 @@
              %variable-links;
              %spec-atts;
              outputclass  CDATA          #IMPLIED
-             class CDATA "- topic/xref ">       
+             class CDATA "- topic/xref ">
 
 
 <!--                    LONG NAME: Audio -->
@@ -372,7 +372,7 @@
 
 <!--                    LONG NAME: Poster image  -->
 <!ELEMENT poster		EMPTY        >
-<!ATTLIST poster	
+<!ATTLIST poster
              name       CDATA         #FIXED "poster"
              value      CDATA         #IMPLIED
              %spec-atts;
@@ -381,7 +381,7 @@
 
 <!--                    LONG NAME: Source  -->
 <!ELEMENT source		EMPTY        >
-<!ATTLIST source	
+<!ATTLIST source
              name       CDATA           #FIXED "source"
              value      CDATA           #IMPLIED
              %spec-atts;
@@ -390,7 +390,7 @@
 
 <!--                    LONG NAME: Track for captions  -->
 <!ELEMENT track		EMPTY        >
-<!ATTLIST track	
+<!ATTLIST track
              name       CDATA           #FIXED "track"
              value      CDATA           #IMPLIED
              %spec-atts;
@@ -411,7 +411,7 @@
 
 <!--                    LONG NAME: Note  -->
 <!ELEMENT note ( %simple-blocks; )*  >
-<!ATTLIST note 
+<!ATTLIST note
              %localization;
              %filters;
              %reuse;
@@ -422,21 +422,21 @@
              >
 
 <!ELEMENT specmeta ( data|ph|specatt )*  >
-<!ATTLIST specmeta 
+<!ATTLIST specmeta
              class        CDATA "+ topic/data ">
 
 <!ELEMENT specatt ( #PCDATA )  >
-<!ATTLIST specatt 
+<!ATTLIST specatt
              %spec-atts;
              outputclass  CDATA          #IMPLIED
              class        CDATA "+ topic/props ">
 
 <!-- to add: -->
 <!-- spec* - template specialization -->
-<!-- 
-xx@specmodel - define a sequence or choice group. if nothing then same as 
+<!--
+xx@specmodel - define a sequence or choice group. if nothing then same as
              base element./sequence, choice, inherit (default)
-xx@importance - required or optional, default required in a sequence, 
+xx@importance - required or optional, default required in a sequence,
               default optional in a choice
 xx@specrole - values: doc, generate, modelonly, prompt, editable
 
