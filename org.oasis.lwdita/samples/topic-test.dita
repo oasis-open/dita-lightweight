@@ -6,7 +6,7 @@
   <prolog></prolog>
   <body>
     <note></note>
-    <p>Here is a <b>paragraph</b>.</p>
+    <p>Here is a <b>paragraph</b>. And a <ph>ph</ph>.</p>
     <fn id="myid"><p>footnote content</p></fn>
 
     <pre>Here is some pre text. </pre>
