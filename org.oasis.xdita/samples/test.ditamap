@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD XDITA Map//EN" "map.dtd">
+<map id="test">
+  <topicref href="topic-test.dita">
+    <topicmeta></topicmeta>
+  </topicref>
+  <topicref href="programming-bulbs.dita">
+    <topicmeta>
+      <navtitle>Programming Light Bulbs</navtitle>
+    </topicmeta>
+  </topicref>
+  <topicref keys="mykey"/>
+</map>

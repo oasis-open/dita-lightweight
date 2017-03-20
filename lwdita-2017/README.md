@@ -1,4 +1,4 @@
-# Cross-format Content with Lightweight DITA (LwDITA draft as of Nov 22, 2016)
+# Cross-format Content with Lightweight DITA (LwDITA draft as of March 12, 2017)
 
 ## Contents
 
