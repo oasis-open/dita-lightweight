@@ -312,7 +312,7 @@
              class CDATA "- topic/alt ">
 
 <!--                    LONG NAME: Data  -->
-<!ELEMENT data             (data)*        >
+<!ELEMENT data             (#PCDATA|data)*        >
 <!ATTLIST data
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
