@@ -10,4 +10,13 @@
 
   <public publicId="-//OASIS//ELEMENTS XDITA Highlight Domain//EN" uri="dtd/highlightDomain.mod"/>
 
+  <!-- The following values are deprecated, kept only for compatibility with the previous version -->
+  <public publicId="-//OASIS//DTD LW DITA Topic//EN" uri="dtd/topic.dtd"/>
+  <public publicId="-//OASIS//DTD LW DITA Map//EN" uri="dtd/map.dtd"/>
+
+  <public publicId="-//OASIS//ELEMENTS LW DITA Topic//EN" uri="dtd/topic.mod"/>
+  <public publicId="-//OASIS//ELEMENTS LW DITA Map//EN" uri="dtd/map.mod"/>
+
+  <public publicId="-//OASIS//ELEMENTS LW DITA Highlight Domain//EN" uri="dtd/highlightDomain.mod"/>
+
 </catalog>
