@@ -22,10 +22,10 @@
 
 <!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
 <!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
-<!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn|note">
-<!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn|note">
-<!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig|note">
-<!ENTITY % fig-blocks  "p|ul|ol|dl|pre|audio|video|simpletable">
+<!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn|note|data">
+<!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn|note|data">
+<!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig|note|data">
+<!ENTITY % fig-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|data">
 
 <!-- common attributes -->
 <!ENTITY % filters
