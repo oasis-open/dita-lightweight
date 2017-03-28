@@ -35,7 +35,7 @@
       </simpletable>
     </fig>
     <simpletable>
-      <sthead><stentry><p>(outside fig) Heading row</p></stentry></sthead>
+      <sthead><stentry><data>text in data element</data><p>(outside fig) Heading row</p></stentry></sthead>
       <strow><stentry><p>(outside fig) Regular row</p></stentry></strow>
     </simpletable>
   </body>

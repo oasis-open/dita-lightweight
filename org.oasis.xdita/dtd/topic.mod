@@ -22,10 +22,10 @@
 
 <!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
 <!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
-<!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn|note|data">
-<!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn|note|data">
-<!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig|note|data">
-<!ENTITY % fig-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|data">
+<!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn|note|%data;">
+<!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn|note|%data;">
+<!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig|note|%data;">
+<!ENTITY % fig-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|%data;">
 
 <!-- common attributes -->
 <!ENTITY % filters
@@ -255,9 +255,9 @@
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/stentry ">
 
-<!ELEMENT fig   (title?, desc?, (%fig-blocks;|image|data|xref)*)    >
-                <!-- fig-blocks: "p|ul|ol|dl|pre|audio|video|simpletable">
-                     plus (image|data|xref)) -->
+<!ELEMENT fig   (title?, desc?, (%fig-blocks;|image|xref)*)    >
+                <!-- fig-blocks: "p|ul|ol|dl|pre|audio|video|simpletable|%data;">
+                     plus (image|xref)) -->
 <!ATTLIST fig
              %fig.attributes;
              %spec-atts;
@@ -312,7 +312,7 @@
              class CDATA "- topic/alt ">
 
 <!--                    LONG NAME: Data  -->
-<!ELEMENT data             (#PCDATA|data)*        >
+<!ELEMENT data             (#PCDATA|%data;)*        >
 <!ATTLIST data
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
@@ -421,7 +421,7 @@
              class        CDATA "- topic/note "
              >
 
-<!ELEMENT specmeta ( data|ph|specatt )*  >
+<!ELEMENT specmeta ( %data;|ph|specatt )*  >
 <!ATTLIST specmeta
              class        CDATA "+ topic/data ">
 
@@ -440,7 +440,7 @@ xx@importance - required or optional, default required in a sequence,
               default optional in a choice
 xx@specrole - values: doc, generate, modelonly, prompt, editable
 
-xx specmeta - data|ph|specatt*
+xx specmeta - %data;|ph|specatt*
 xxspecatt - specializations of @props
 
 
