@@ -66,7 +66,7 @@
 <!-- ============================================================= -->
 
 <!--                    LONG NAME: Topic  -->
-<!ELEMENT topic   (title, shortdesc?, prolog?, body)  >
+<!ELEMENT topic   (title, shortdesc?, prolog?, body?)  >
 <!ATTLIST topic
              id       ID          #REQUIRED
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
