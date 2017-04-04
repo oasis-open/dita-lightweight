@@ -20,10 +20,11 @@
         </ul>
       </li>
     </ul>
-    <p>&lt;audio> element: </p>
-    <audio></audio>
+    
     <p>&lt;video> element:</p>
-    <video></video>
+    <video>
+      <source value="https://www.youtube.com/embed/5KE8vkg4ijk?html5=1"/> 
+    </video>
     <p>Note: the &lt;object> element cannot be used.</p>
     
     <fig>
