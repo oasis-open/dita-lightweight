@@ -3,6 +3,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY included-domains "">
+<!ENTITY xdita-constraint "(topic xdita-c)">
 <!ENTITY excluded-attributes "">
 
 <!-- ============================================================= -->
@@ -71,7 +72,7 @@
              id       ID          #REQUIRED
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
 	           ditaarch:DITAArchVersion CDATA "1.3"
-             domains  CDATA       "&included-domains;"
+             domains CDATA "&xdita-constraint; &included-domains;"
              outputclass  CDATA    #IMPLIED
              %localization;
              %spec-atts;
