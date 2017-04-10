@@ -19,7 +19,9 @@ The basic steps to using the tool:
 3. Save the output (result) document as an .rng file in the same directory as the other .rng files specified above.
 4. Create a test XML topic, inserting the following statement immediately after the XML declaration:
 
-> <?xml-model href="your-specialization.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+```xml
+<?xml-model href="your-specialization.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+```
 
 ## Template Tool Future Development
 
