@@ -341,6 +341,8 @@
              %reuse;
              %spec-atts;
              outputclass  CDATA          #IMPLIED
+             height     NMTOKEN                          #IMPLIED
+             width      NMTOKEN                          #IMPLIED
              class CDATA "+ topic/object h5m-d/audio ">
 
 <!--                    LONG NAME: Video -->
@@ -350,6 +352,8 @@
              %reuse;
              %spec-atts;
              outputclass  CDATA          #IMPLIED
+             height     NMTOKEN                          #IMPLIED
+             width      NMTOKEN                          #IMPLIED
              class CDATA "+ topic/object h5m-d/video ">
 
 <!--                    LONG NAME: Fallback -->
