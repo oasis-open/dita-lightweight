@@ -354,6 +354,7 @@
              outputclass  CDATA          #IMPLIED
              height     NMTOKEN                          #IMPLIED
              width      NMTOKEN                          #IMPLIED
+             iframe (yes|no) "no"
              class CDATA "+ topic/object h5m-d/video ">
 
 <!--                    LONG NAME: Fallback -->
