@@ -21,8 +21,8 @@
 
 <!-- common content models -->
 
-<!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;|fnref">
-<!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;|fnref">
+<!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
+<!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
 <!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn|note|%data;">
 <!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn|note|%data;">
 <!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig|note|%data;">
@@ -413,18 +413,6 @@
              id          NMTOKEN        #REQUIRED
              class       CDATA "- topic/fn ">
 
-<!--                    LONG NAME: Footnote Reference  -->
-<!ELEMENT fnref ( %common-inline; )*  >
-<!ATTLIST fnref
-             %localization;
-             %filters;
-             %reuse;
-             %spec-atts;
-             type        CDATA          #FIXED "fn"
-             href        CDATA          #IMPLIED
-             keyref      CDATA          #IMPLIED
-             outputclass CDATA          #IMPLIED
-             class       CDATA "- topic/xref h5m-d/fnref ">
 
 <!--                    LONG NAME: Note  -->
 <!ELEMENT note ( %simple-blocks; )*  >
