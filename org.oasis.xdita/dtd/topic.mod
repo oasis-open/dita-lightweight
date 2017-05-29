@@ -24,6 +24,7 @@
 <!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
 <!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
 <!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn|note|%data;">
+<!ENTITY % fn-blocks  "p|ul|ol|dl|%data;">
 <!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn|note|%data;">
 <!ENTITY % list-blocks "p|ul|ol|dl|pre|audio|video|simpletable|fig|note|%data;">
 <!ENTITY % fig-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|%data;">
@@ -95,7 +96,7 @@
              class CDATA "- topic/shortdesc ">
 
 <!--                    LONG NAME: Prolog-->
-<!ELEMENT prolog (%data;|specmeta)* >
+<!ELEMENT prolog (%data;)* >
 <!ATTLIST prolog
              %spec-atts;
              outputclass  CDATA          #IMPLIED
@@ -271,15 +272,6 @@
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/desc ">
 
-<!--                    LONG NAME: Object parameter  -->
-<!ELEMENT param		EMPTY        >
-<!ATTLIST param
-             name       CDATA                            #REQUIRED
-             value      CDATA                            #IMPLIED
-             %spec-atts;
-             outputclass  CDATA          #IMPLIED
-             class CDATA "- topic/param ">
-
 <!--                    LONG NAME: Phrase content  -->
 <!ELEMENT ph             (%all-inline;)*        >
 <!ATTLIST ph
@@ -400,7 +392,7 @@
              class CDATA "+ topic/param h5m-d/track ">
 
 <!--                    LONG NAME: Footnote  -->
-<!ELEMENT fn ( %simple-blocks; )*  >
+<!ELEMENT fn ( %fn-blocks; )*  >
 <!ATTLIST fn
              %localization;
              %filters;
@@ -424,29 +416,3 @@
              class        CDATA "- topic/note "
              >
 
-<!ELEMENT specmeta ( %data;|ph|specatt )*  >
-<!ATTLIST specmeta
-             class        CDATA "+ topic/data ">
-
-<!ELEMENT specatt ( #PCDATA )  >
-<!ATTLIST specatt
-             %spec-atts;
-             outputclass  CDATA          #IMPLIED
-             class        CDATA "+ topic/props ">
-
-<!-- to add: -->
-<!-- spec* - template specialization -->
-<!--
-xx@specmodel - define a sequence or choice group. if nothing then same as
-             base element./sequence, choice, inherit (default)
-xx@importance - required or optional, default required in a sequence,
-              default optional in a choice
-xx@specrole - values: doc, generate, modelonly, prompt, editable
-
-xx specmeta - %data;|ph|specatt*
-xxspecatt - specializations of @props
-
-
-xx@outputclass - intended element name. needed pretty much everywhere.
-xx@href - add to data element
--->
