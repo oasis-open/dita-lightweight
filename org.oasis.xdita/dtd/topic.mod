@@ -76,14 +76,12 @@
              domains CDATA "&xdita-constraint; &included-domains;"
              outputclass  CDATA    #IMPLIED
              %localization;
-             %spec-atts;
              class CDATA "- topic/topic ">
 
 <!--                    LONG NAME: Title -->
 <!ELEMENT title (%common-inline;)* >
 <!ATTLIST title
              %localization;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/title ">
 
@@ -91,14 +89,12 @@
 <!ELEMENT shortdesc     (%all-inline;)* >
 <!ATTLIST shortdesc
              %localization;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/shortdesc ">
 
 <!--                    LONG NAME: Prolog-->
 <!ELEMENT prolog (%data;)* >
 <!ATTLIST prolog
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/prolog ">
 
@@ -107,7 +103,6 @@
 <!ELEMENT body          ((%all-blocks;)*, section*)        >
 <!ATTLIST body
              %localization;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/body ">
 
@@ -117,7 +112,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/section ">
 
@@ -127,7 +121,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/p ">
 
@@ -138,7 +131,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/ul ">
 
@@ -148,7 +140,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/ol ">
 
@@ -159,7 +150,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/li ">
 
@@ -169,7 +159,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dl ">
 
@@ -179,7 +168,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dlentry ">
 
@@ -189,7 +177,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dt ">
 
@@ -199,7 +186,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dd ">
 
@@ -211,7 +197,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/pre ">
 
@@ -222,7 +207,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/simpletable ">
 
@@ -233,7 +217,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/sthead ">
 
@@ -243,7 +226,6 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/strow ">
 
@@ -253,14 +235,12 @@
              %localization;
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/stentry ">
 
 <!ELEMENT fig   (title?, desc?, (%fig-blocks;|image|xref)*)    >
 <!ATTLIST fig
              %fig.attributes;
-             %spec-atts;
              class CDATA "- topic/fig " >
 
 
@@ -268,7 +248,6 @@
 <!ELEMENT desc		(%common-inline;)*        >
 <!ATTLIST desc
              %localization;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/desc ">
 
@@ -277,7 +256,6 @@
 <!ATTLIST ph
              %localization;
              %variable-content;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/ph ">
 
@@ -289,7 +267,6 @@
              width      NMTOKEN                          #IMPLIED
              %localization;
              %variable-content;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/image ">
 
@@ -298,7 +275,6 @@
 <!ATTLIST alt
              %localization;
              %variable-content;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/alt ">
 
@@ -309,7 +285,6 @@
              value      CDATA                            #IMPLIED
              href       CDATA                            #IMPLIED
              %variable-content;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
 
@@ -321,7 +296,6 @@
              scope      (local | peer | external)        #IMPLIED
              %localization;
              %variable-links;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/xref ">
 
@@ -331,7 +305,6 @@
 <!ATTLIST audio
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/object h5m-d/audio ">
 
@@ -340,7 +313,6 @@
 <!ATTLIST video
              %filters;
              %reuse;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              height     NMTOKEN                          #IMPLIED
              width      NMTOKEN                          #IMPLIED
@@ -351,7 +323,6 @@
 <!ELEMENT fallback		(%common-inline;)*        >
 <!ATTLIST fallback
              %localization;
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/desc h5m-d/fallback ">
 
@@ -359,7 +330,6 @@
 <!ELEMENT controls 	EMPTY        >
 <!ATTLIST controls
              name       CDATA   			#FIXED "controls"
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/controls ">
 <!-- value      CDATA         (y|n)  "y" -->
@@ -369,7 +339,6 @@
 <!ATTLIST poster
              name       CDATA         #FIXED "poster"
              value      CDATA         #IMPLIED
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/poster ">
 
@@ -378,7 +347,6 @@
 <!ATTLIST source
              name       CDATA           #FIXED "source"
              value      CDATA           #IMPLIED
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/source ">
 
@@ -387,7 +355,6 @@
 <!ATTLIST track
              name       CDATA           #FIXED "track"
              value      CDATA           #IMPLIED
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/track ">
 
@@ -398,7 +365,6 @@
              %filters;
              %fn-reuse;
              callout     CDATA          #IMPLIED
-             %spec-atts;
              outputclass CDATA          #IMPLIED
              id          NMTOKEN        #REQUIRED
              class       CDATA "- topic/fn ">
@@ -411,7 +377,6 @@
              %filters;
              %reuse;
              type (caution|warning|danger|trouble|notice|note) "note"
-             %spec-atts;
              outputclass  CDATA          #IMPLIED
              class        CDATA "- topic/note "
              >
