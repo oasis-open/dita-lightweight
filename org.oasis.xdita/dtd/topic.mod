@@ -55,13 +55,6 @@
              "%display-atts;
               %localization;
               outputclass CDATA #IMPLIED">
-<!-- Specialization template attributes -->
-<!ENTITY % spec-atts
-             "specmodel (sequence|choice|inherit) 'inherit'
-              specrole NMTOKENS 'editable'
-              importance (required|optional) #IMPLIED">
-             <!-- @specrole values: doc, generate, modelonly, prompt, editable -->
-
 
 <!-- ============================================================= -->
 <!--                    ELEMENT DECLARATIONS                       -->
