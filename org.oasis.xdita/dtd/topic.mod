@@ -96,7 +96,7 @@
              class CDATA "- topic/shortdesc ">
 
 <!--                    LONG NAME: Prolog-->
-<!ELEMENT prolog (%data;)* >
+<!ELEMENT prolog (%data;|specmeta)* >
 <!ATTLIST prolog
              %spec-atts;
              outputclass  CDATA          #IMPLIED
@@ -416,3 +416,29 @@
              class        CDATA "- topic/note "
              >
 
+<!ELEMENT specmeta ( %data;|ph|specatt )*  >
+<!ATTLIST specmeta
+             class        CDATA "+ topic/data ">
+
+<!ELEMENT specatt ( #PCDATA )  >
+<!ATTLIST specatt
+             %spec-atts;
+             outputclass  CDATA          #IMPLIED
+             class        CDATA "+ topic/props ">
+
+<!-- to add: -->
+<!-- spec* - template specialization -->
+<!--
+xx@specmodel - define a sequence or choice group. if nothing then same as
+             base element./sequence, choice, inherit (default)
+xx@importance - required or optional, default required in a sequence,
+              default optional in a choice
+xx@specrole - values: doc, generate, modelonly, prompt, editable
+
+xx specmeta - %data;|ph|specatt*
+xxspecatt - specializations of @props
+
+
+xx@outputclass - intended element name. needed pretty much everywhere.
+xx@href - add to data element
+-->
