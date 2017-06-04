@@ -47,7 +47,7 @@
 <!-- ============================================================= -->
 
 <!--                    LONG NAME: Map  -->
-<!ELEMENT map		(topicmeta?, topicref*)  >
+<!ELEMENT map		(topicmeta?, (topicref | keydef)*)  >
 <!ATTLIST map
              id         ID                                 #REQUIRED
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/" 
@@ -58,7 +58,7 @@
 
 
 <!--                    LONG NAME: Metadata-->
-<!ELEMENT topicmeta     (navtitle?, data*) >
+<!ELEMENT topicmeta     (navtitle?, linktext?, data*) >
 <!ATTLIST topicmeta  
              class CDATA "- map/topicmeta ">
 
@@ -67,6 +67,12 @@
 <!ATTLIST navtitle
              %localization;
              class CDATA "- topic/navtitle ">
+             
+<!--                    LONG NAME: Link text-->
+<!ELEMENT linktext     (#PCDATA | %ph;)* >
+<!ATTLIST linktext  
+            %localization;
+             class CDATA "- map/linktext ">            
  
 <!--                    LONG NAME: Data  -->
 <!ELEMENT data             (data)*        >
@@ -94,8 +100,20 @@
              %variable-links;
              class CDATA "- map/topicref ">       
 
-<!--
- 
+<!--                    LONG NAME: Key Definition  -->
+<!ELEMENT keydef	(topicmeta?, data*)        >  
+<!ATTLIST keydef
+              href 
+                        CDATA 
+                                  #IMPLIED
+              keys 
+                        CDATA 
+                                  #REQUIRED
+              processing-role
+                        CDATA       #FIXED      'resource-only' 
+              class CDATA "+ map/topicref mapgroup-d/keydef"
+>
 
 
--->
+
+
