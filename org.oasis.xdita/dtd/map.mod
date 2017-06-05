@@ -103,15 +103,15 @@
 <!--                    LONG NAME: Key Definition  -->
 <!ELEMENT keydef	(topicmeta?, data*)        >  
 <!ATTLIST keydef
-              href 
+              href
                         CDATA 
                                   #IMPLIED
-              keys 
+              keys
                         CDATA 
                                   #REQUIRED
               processing-role
                         CDATA       #FIXED      'resource-only' 
-              class CDATA "+ map/topicref mapgroup-d/keydef"
+              class CDATA "+ map/topicref mapgroup-d/keydef "
 >
 
 
