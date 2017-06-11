@@ -1,4 +1,38 @@
 <!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    Lightweight DITA Topic                            -->
+<!--  VERSION:   1.0                                               -->
+<!--  DATE:      XXX                                               -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identfier or an
+      appropriate system identifier:
+PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
+      Delivered as file "topic.mod"                                -->
+
+<!-- ============================================================= -->
+<!-- SYSTEM:     Lightweight DITA                                  -->
+<!--                                                               -->
+<!-- PURPOSE:    Declaring the elements and specialization         -->
+<!--             attributes for Lightweight DITA topics            -->
+<!--                                                               -->
+<!-- ORIGINAL CREATION DATE:                                       -->
+<!--             XXXX                                              -->
+<!--                                                               -->
+<!--             (C) OASIS                                         -->
+<!--             All Rights Reserved.                              -->
+<!--                                                               -->
+<!--  UPDATES:                                                     -->
+<!--    XX XXX XXXX XXX: Initial creation                          -->
+<!--    11 Jun 2017 KJE: Added headers                             -->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
 <!-- ============================================================= -->
 

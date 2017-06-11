@@ -1,15 +1,36 @@
 <!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    Lightweight DITA Topic                            -->
+<!--  VERSION:   1.0                                               -->
+<!--  DATE:      XXX                                               -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
 <!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
 <!--                    TYPICAL INVOCATION                         -->
 <!--                                                               -->
-<!--  Refer to this file by the following public identifier or an
-      appropriate system identifier
+<!--  Refer to this file by the following public identfier or an
+      appropriate system identifier:
 PUBLIC "-//OASIS//DTD XDITA Topic//EN"
       Delivered as file "topic.dtd"                                -->
 
-<!-- The public ID above refers to the latest version of this DTD.
-     To refer to this specific version, you may use this value:
-PUBLIC "-//OASIS//DTD XDITA 1.3 Topic//EN"                          -->
+<!-- ============================================================= -->
+<!-- SYSTEM:     Lightweight DITA                                  -->
+<!--                                                               -->
+<!-- PURPOSE:    DTD to describe Lightweight DITA topic            -->
+<!--                                                               -->
+<!-- ORIGINAL CREATION DATE:                                       -->
+<!--             XXXX                                              -->
+<!--                                                               -->
+<!--             (C) OASIS                                         -->
+<!--             All Rights Reserved.                              -->
+<!--                                                               -->
+<!--  UPDATES:                                                     -->
+<!--    XX XXX XXXX XXX: Initial creation                          -->
+<!--    11 Jun 2017 KJE: Added headers                             -->
+<!-- ============================================================= -->
 
 
 <!-- ============================================================= -->
