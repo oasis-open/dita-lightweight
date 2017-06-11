@@ -29,8 +29,27 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--             All Rights Reserved.                              -->
 <!--                                                               -->
 <!--  UPDATES:                                                     -->
-<!--    XX XXX XXXX XXX: Initial creation                          -->
-<!--    11 Jun 2017 KJE: Added headers                             -->
+<!--    25 Nov 2014 KJE: Upload files to DITA TC SVN repo          -->
+<!--    13 Jul 2015  MG: Made <shortdesc> and <prolog> optional;   -->
+<!--                     disabled nested topics                    -->
+<!--    16 May 2016  MG: Upload files to GitHub repo               -->
+<!--    10 Jul 2016  MG: Removed object element, renamed           -->
+<!--                     table-blocks to simple-blocks, added fn   -->
+<!--    26 Aug 2016  MG: Added template specialization markup;     -->
+<!--                     added @outputclass; added @href to <data> -->  
+<!--    19 Mar 2017  MG: Allow PCDATA in <data>                    -->
+<!--    27 Mar 2017  CE: Added <data> to block entities            -->
+<!--    28 Mar 2017  MG: Touch up <data> additions                 -->
+<!--    31 Mar 2017  MG: Made <body> optional                      -->
+<!--    09 May 2017  CE: Added @width and @height to <video> and   -->
+<!--                     <audio>                                   -->
+<!--    10 May 2017  CE: Added @iframe to <video>                  -->
+<!--    11 May 2016  CE: Removed <fnref>                           -->
+<!--    16 May 2016  CE: Removed @width and @height from <audio>   -->
+<!--    29 May 2017  MG: Added fn-blocks entity; removed <param>,  -->
+<!--                     <specmeta>,<specatt>; removed %spec-atts  -->
+<!--    11 Jun 2017 KJE: Added headers and update logs             -->
+
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->

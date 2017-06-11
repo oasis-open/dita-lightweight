@@ -29,8 +29,10 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--             All Rights Reserved.                              -->
 <!--                                                               -->
 <!--  UPDATES:                                                     -->
-<!--    XX XXX XXXX XXX: Initial creation                          -->
-<!--    11 Jun 2017 KJE: Added headers                             -->
+<!--    25 Nov 2014 KJE: Upload files to DITA TC SVN repo          -->
+<!--    16 May 2016  MG: Upload files to GitHub repo               -->
+<!--    04 Jun 2017  AH: Added <keydef> and <linktext>             -->
+<!--    11 Jun 2017 KJE: Added headers and update logs             -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
