@@ -44,8 +44,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--    09 May 2017  CE: Added @width and @height to <video> and   -->
 <!--                     <audio>                                   -->
 <!--    10 May 2017  CE: Added @iframe to <video>                  -->
-<!--    11 May 2016  CE: Removed <fnref>                           -->
-<!--    16 May 2016  CE: Removed @width and @height from <audio>   -->
+<!--    11 May 2017  CE: Removed <fnref>                           -->
+<!--    16 May 2017  CE: Removed @width and @height from <audio>   -->
 <!--    29 May 2017  MG: Added fn-blocks entity; removed <param>,  -->
 <!--                     <specmeta>,<specatt>; removed %spec-atts  -->
 <!--    11 Jun 2017 KJE: Added headers and update logs             -->
