@@ -141,6 +141,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Key Definition  -->
 <!ELEMENT keydef	(topicmeta?, data*)        >
 <!ATTLIST keydef
+              %filters;
               href
                         CDATA
                                   #IMPLIED
