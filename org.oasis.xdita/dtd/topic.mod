@@ -172,7 +172,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 
 
 <!--                    LONG NAME: Unordered list  -->
-<!ELEMENT ul             (li)*        >
+<!ELEMENT ul             (li)+        >
 <!ATTLIST ul
              %localization;
              %filters;
@@ -181,7 +181,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              class CDATA "- topic/ul ">
 
 <!--                    LONG NAME: Ordered list  -->
-<!ELEMENT ol             (li)*        >
+<!ELEMENT ol             (li)+        >
 <!ATTLIST ol
              %localization;
              %filters;
@@ -200,7 +200,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              class CDATA "- topic/li ">
 
 <!--                    LONG NAME: Description list -->
-<!ELEMENT dl             (dlentry)*        >
+<!ELEMENT dl             (dlentry)+       >
 <!ATTLIST dl
              %localization;
              %filters;
@@ -237,7 +237,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 
 
 <!--                    LONG NAME: Preformatted content -->
-<!ELEMENT pre            (%all-inline;)*        >
+<!ELEMENT pre            (#PCDATA|%ph;|xref|%data;)*        >
 <!ATTLIST pre
              xml:space  (preserve)               #FIXED 'preserve'
              %localization;
@@ -248,7 +248,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 
 
 <!--                    LONG NAME: Table -->
-<!ELEMENT simpletable (sthead?, strow*)        >
+<!ELEMENT simpletable (sthead?, strow+)        >
 <!ATTLIST simpletable
              %localization;
              %filters;
@@ -258,7 +258,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 
 
 <!--                    LONG NAME: Table header row -->
-<!ELEMENT sthead (stentry*)        >
+<!ELEMENT sthead (stentry+)        >
 <!ATTLIST sthead
              %localization;
              %filters;
@@ -317,7 +317,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              class CDATA "- topic/image ">
 
 <!--                    LONG NAME: Alternative content  -->
-<!ELEMENT alt           (%common-inline;)*        >
+<!ELEMENT alt           (#PCDATA|%ph;|xref|%data;)*        >
 <!ATTLIST alt
              %localization;
              %variable-content;

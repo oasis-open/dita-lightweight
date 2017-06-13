@@ -46,6 +46,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!-- ============================================================= -->
 
 <!ENTITY % ph  "ph">
+<!ENTITY % data  "data">
 <!ENTITY % filter-adds " ">
 
 <!-- ============================================================= -->
@@ -110,11 +111,13 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              class CDATA "- map/linktext ">
 
 <!--                    LONG NAME: Data  -->
-<!ELEMENT data             (data)*        >
+<!ELEMENT data             (#PCDATA|%data;)*        >
 <!ATTLIST data
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
+             href       CDATA                            #IMPLIED
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
 
 <!--                    LONG NAME: Phrase content  -->

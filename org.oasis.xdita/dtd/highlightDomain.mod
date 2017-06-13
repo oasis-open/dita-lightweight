@@ -39,32 +39,32 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST b
              %localization;
              %variable-content;
-             class CDATA "- topic/ph hi-d/b ">
+             class CDATA "+ topic/ph hi-d/b ">
 
 <!--                    LONG NAME: Italic content  -->
 <!ELEMENT i             (%all-inline;)*        >
 <!ATTLIST i
              %localization;
              %variable-content;
-             class CDATA "- topic/ph hi-d/i ">
+             class CDATA "+ topic/ph hi-d/i ">
 
 <!--                    LONG NAME: Underlined content  -->
 <!ELEMENT u             (%all-inline;)*        >
 <!ATTLIST u
              %localization;
              %variable-content;
-             class CDATA "- topic/ph hi-d/u ">
+             class CDATA "+ topic/ph hi-d/u ">
 
 <!--                    LONG NAME: Superscript content  -->
 <!ELEMENT sup             (%all-inline;)*        >
 <!ATTLIST sup
              %localization;
              %variable-content;
-             class CDATA "- topic/ph hi-d/sup ">
+             class CDATA "+ topic/ph hi-d/sup ">
 
 <!--                    LONG NAME: Subscript content  -->
 <!ELEMENT sub             (%all-inline;)*        >
 <!ATTLIST sub
              %localization;
              %variable-content;
-             class CDATA "- topic/ph hi-d/sub ">
+             class CDATA "+ topic/ph hi-d/sub ">
