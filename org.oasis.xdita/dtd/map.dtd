@@ -1,15 +1,37 @@
 <!-- ============================================================= -->
-<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
-<!--                        TYPICAL INVOCATION                     -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    Lightweight DITA Map                              -->
+<!--  VERSION:   1.0                                               -->
+<!--  DATE:      XXX                                               -->
 <!--                                                               -->
-<!-- Refer to this file by the following public identifier or an
-     appropriate system identifier:
-PUBLIC "-//OASIS//DTD XDITA Map//EN"
-     Delivered as file "map.dtd"                                   -->
+<!-- ============================================================= -->
 
-<!-- The public ID above refers to the latest version of this DTD.
-     To refer to this specific version, you may use this value:
-PUBLIC "-//OASIS//DTD XDITA 1.3 Map//EN"                            -->
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identfier or an
+      appropriate system identifier:
+PUBLIC "-//OASIS//DTD XDITA Map//EN"
+      Delivered as file "map.dtd"                                  -->
+
+<!-- ============================================================= -->
+<!-- SYSTEM:     Lightweight DITA                                  -->
+<!--                                                               -->
+<!-- PURPOSE:    DTD to describe Lightweight DITA map              -->
+<!--                                                               -->
+<!-- ORIGINAL CREATION DATE:                                       -->
+<!--             XXXX                                              -->
+<!--                                                               -->
+<!--             (C) OASIS                                         -->
+<!--             All Rights Reserved.                              -->
+<!--                                                               -->
+<!--  UPDATES:                                                     -->
+<!--    25 Nov 2014 KJE: Upload files to DITA TC SVN repo          -->
+<!--    16 May 2016  MG: Upload files to GitHub repo               -->
+<!--    11 Jun 2017 KJE: Added headers and update logs             -->
+<!-- ============================================================= -->
 
 <!-- ============================================================= -->
 <!--                    ADD PHRASE ELEMENTS                        -->

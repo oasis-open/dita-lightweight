@@ -1,10 +1,38 @@
-<!--highlighting domain - class prefix hi-d -->
-<!--add to ph element in doctype shell: 
-	b | u | i | sup | sub 
--->
-<!--add to included-domains in doctype shell:
-	(topic hi-d)
--->
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    Lightweight DITA Highlighting Domain              -->
+<!--  VERSION:   1.0                                               -->
+<!--  DATE:      XXX                                               -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identfier or an
+      appropriate system identifier:
+PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
+      Delivered as file "highlightDomain.mod"                      -->
+
+<!-- ============================================================= -->
+<!-- SYSTEM:     Lightweight DITA                                  -->
+<!--                                                               -->
+<!-- PURPOSE:    Declaring the elements and specialization         -->
+<!--             attributes for the LwDITA highlighting domain     -->
+<!--                                                               -->
+<!-- ORIGINAL CREATION DATE:                                       -->
+<!--             XXXX                                              -->
+<!--                                                               -->
+<!--             (C) OASIS                                         -->
+<!--             All Rights Reserved.                              -->
+<!--                                                               -->
+<!--  UPDATES:                                                     -->
+<!--    25 Nov 2014 KJE: Upload files to DITA TC SVN repo          -->
+<!--    16 May 2016  MG: Upload files to GitHub repo               -->
+<!--    11 Jun 2017 KJE: Added headers and update logs             -->
+<!-- ============================================================= -->
 
 <!--                    LONG NAME: Bold content  -->
 <!ELEMENT b             (%all-inline;)*        >
