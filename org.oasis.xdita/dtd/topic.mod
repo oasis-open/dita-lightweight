@@ -221,7 +221,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ELEMENT dt             (%all-inline;)*        >
 <!ATTLIST dt
              %localization;
-             %filters;
              %reuse;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dt ">
@@ -230,7 +229,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ELEMENT dd             (%list-blocks;)*        >
 <!ATTLIST dd
              %localization;
-             %filters;
              %reuse;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/dd ">
