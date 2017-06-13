@@ -11,7 +11,7 @@
 <!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
 <!--                    TYPICAL INVOCATION                         -->
 <!--                                                               -->
-<!--  Refer to this file by the following public identfier or an
+<!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
 PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
       Delivered as file "map.mod"                                  -->
@@ -40,7 +40,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 
 <!ENTITY included-domains "">
 <!ENTITY excluded-attributes "">
-  
+
 <!-- ============================================================= -->
 <!--                    EXTENSION POINTS                 -->
 <!-- ============================================================= -->
@@ -63,7 +63,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
             'id      NMTOKEN                            #IMPLIED
              conref  CDATA                              #IMPLIED  ' >
 <!ENTITY % reference-content
-            'href      CDATA                            #IMPLIED 
+            'href      CDATA                            #IMPLIED
              format    CDATA                            #IMPLIED
              scope     (local | peer | external)        #IMPLIED '>
 <!ENTITY % control-variables
@@ -85,7 +85,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ELEMENT map		(topicmeta?, (topicref | keydef)*)  >
 <!ATTLIST map
              id         ID                                 #REQUIRED
-             xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/" 
+             xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
 	     ditaarch:DITAArchVersion CDATA "1.3"
              domains    CDATA                    "&included-domains;"
              %localization;
@@ -94,7 +94,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 
 <!--                    LONG NAME: Metadata-->
 <!ELEMENT topicmeta     (navtitle?, linktext?, data*) >
-<!ATTLIST topicmeta  
+<!ATTLIST topicmeta
              class CDATA "- map/topicmeta ">
 
 <!--                    LONG NAME: Navigation title -->
@@ -102,13 +102,13 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ATTLIST navtitle
              %localization;
              class CDATA "- topic/navtitle ">
-             
+
 <!--                    LONG NAME: Link text-->
 <!ELEMENT linktext     (#PCDATA | %ph;)* >
-<!ATTLIST linktext  
+<!ATTLIST linktext
             %localization;
-             class CDATA "- map/linktext ">            
- 
+             class CDATA "- map/linktext ">
+
 <!--                    LONG NAME: Data  -->
 <!ELEMENT data             (data)*        >
 <!ATTLIST data
@@ -116,7 +116,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              value      CDATA                            #IMPLIED
              %variable-content;
              class CDATA "- topic/data ">
-             
+
 <!--                    LONG NAME: Phrase content  -->
 <!ELEMENT ph             (%all-inline;)*        >
 <!ATTLIST ph
@@ -131,24 +131,20 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 	           %reuse;
              %filters;
              %reference-content;
-	           %control-variables; 
+	           %control-variables;
              %variable-links;
-             class CDATA "- map/topicref ">       
+             class CDATA "- map/topicref ">
 
 <!--                    LONG NAME: Key Definition  -->
-<!ELEMENT keydef	(topicmeta?, data*)        >  
+<!ELEMENT keydef	(topicmeta?, data*)        >
 <!ATTLIST keydef
               href
-                        CDATA 
+                        CDATA
                                   #IMPLIED
               keys
-                        CDATA 
+                        CDATA
                                   #REQUIRED
               processing-role
-                        CDATA       #FIXED      'resource-only' 
+                        CDATA       #FIXED      'resource-only'
               class CDATA "+ map/topicref mapgroup-d/keydef "
 >
-
-
-
-

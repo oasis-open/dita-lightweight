@@ -11,7 +11,7 @@
 <!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
 <!--                    TYPICAL INVOCATION                         -->
 <!--                                                               -->
-<!--  Refer to this file by the following public identfier or an
+<!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
 PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
       Delivered as file "topic.mod"                                -->
@@ -36,7 +36,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--    10 Jul 2016  MG: Removed object element, renamed           -->
 <!--                     table-blocks to simple-blocks, added fn   -->
 <!--    26 Aug 2016  MG: Added template specialization markup;     -->
-<!--                     added @outputclass; added @href to <data> -->  
+<!--                     added @outputclass; added @href to <data> -->
 <!--    19 Mar 2017  MG: Allow PCDATA in <data>                    -->
 <!--    27 Mar 2017  CE: Added <data> to block entities            -->
 <!--    28 Mar 2017  MG: Touch up <data> additions                 -->
@@ -426,4 +426,3 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              outputclass  CDATA          #IMPLIED
              class        CDATA "- topic/note "
              >
-

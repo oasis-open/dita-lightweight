@@ -11,7 +11,7 @@
 <!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
 <!--                    TYPICAL INVOCATION                         -->
 <!--                                                               -->
-<!--  Refer to this file by the following public identfier or an
+<!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
 PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
       Delivered as file "highlightDomain.mod"                      -->
