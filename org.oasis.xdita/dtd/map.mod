@@ -39,6 +39,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!-- ============================================================= -->
 
 <!ENTITY included-domains "">
+<!ENTITY xdita-constraint "(map xdita-c)">
 <!ENTITY excluded-attributes "">
 
 <!-- ============================================================= -->
@@ -87,7 +88,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ATTLIST map
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
 	     ditaarch:DITAArchVersion CDATA "1.3"
-             domains    CDATA                    "&included-domains;"
+             domains    CDATA                    "&xdita-constraint; &included-domains;"
              %localization;
              class CDATA "- map/map ">
 
