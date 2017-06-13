@@ -53,7 +53,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    COMMON DECLARATIONS                       -->
 <!-- ============================================================= -->
 
-<!ENTITY % all-inline  "#PCDATA|%ph;">
+<!ENTITY % all-inline  "#PCDATA|%ph;|%data;">
 
 
 <!--common attributes-->
@@ -85,7 +85,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Map  -->
 <!ELEMENT map		(topicmeta?, (topicref | keydef)*)  >
 <!ATTLIST map
-             id         ID                                 #REQUIRED
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
 	     ditaarch:DITAArchVersion CDATA "1.3"
              domains    CDATA                    "&included-domains;"
