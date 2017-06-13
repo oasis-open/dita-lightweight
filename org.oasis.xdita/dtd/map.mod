@@ -33,6 +33,9 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--    16 May 2016  MG: Upload files to GitHub repo               -->
 <!--    04 Jun 2017  AH: Added <keydef> and <linktext>             -->
 <!--    11 Jun 2017 KJE: Added headers and update logs             -->
+<!--    13 Jun 2017  CE: Added XDITA constraint token              -->
+<!--    13 Jun 2017  CE: Made map ID optional                      -->
+<!--    13 Jun 2017  CE: Added props to <keydef>                   -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->

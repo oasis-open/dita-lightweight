@@ -49,6 +49,10 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--    29 May 2017  MG: Added fn-blocks entity; removed <param>,  -->
 <!--                     <specmeta>,<specatt>; removed %spec-atts  -->
 <!--    11 Jun 2017 KJE: Added headers and update logs             -->
+<!--    13 Jun 2017  CE: Removed filtering from <dt> and <dd>      -->
+<!--    13 Jun 2017  CE: Removed <image> from <pre>                -->
+<!--    13 Jun 2017  CE: Modified <stentry>, <strow>, <dlentry>,   -->
+<!--                     and <li> to allow one-or-more             -->
 
 <!-- ============================================================= -->
 <!-- ============================================================= -->
