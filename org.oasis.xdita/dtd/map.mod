@@ -95,6 +95,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 	         ditaarch:DITAArchVersion CDATA "1.3"
              domains    CDATA                    "&xdita-constraint; &included-domains;"
              %localization;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- map/map ">
 
 
@@ -108,12 +109,14 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ELEMENT navtitle (#PCDATA|%ph;)* >
 <!ATTLIST navtitle
              %localization;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/navtitle ">
 
 <!--                    LONG NAME: Link text-->
 <!ELEMENT linktext     (#PCDATA | %ph;)* >
 <!ATTLIST linktext
-            %localization;
+             %localization;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- map/linktext ">
 
 <!--                    LONG NAME: Data  -->
@@ -132,6 +135,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ATTLIST ph
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/ph ">
              
 <!--                    LONG NAME: Image  -->
@@ -177,6 +181,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              %reference-content;
 	         %control-variables;
              %variable-links;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- map/topicref ">
 
 <!--                    LONG NAME: Key Definition  -->
@@ -192,5 +197,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
                                   #REQUIRED
               processing-role
                         CDATA       #FIXED      'resource-only'
+              outputclass  CDATA          #IMPLIED
               class CDATA "+ map/topicref mapgroup-d/keydef "
 >

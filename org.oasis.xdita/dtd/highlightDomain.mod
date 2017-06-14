@@ -39,6 +39,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST b
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/b ">
 
 <!--                    LONG NAME: Italic content  -->
@@ -46,6 +47,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST i
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/i ">
 
 <!--                    LONG NAME: Underlined content  -->
@@ -53,6 +55,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST u
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/u ">
 
 <!--                    LONG NAME: Superscript content  -->
@@ -60,6 +63,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST sup
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/sup ">
 
 <!--                    LONG NAME: Subscript content  -->
@@ -67,4 +71,5 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST sub
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/sub ">

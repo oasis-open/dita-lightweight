@@ -146,7 +146,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ELEMENT prolog (%data;)* >
 <!ATTLIST prolog
              %localization;
-             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/prolog ">
 
 
