@@ -122,7 +122,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ATTLIST topic
              id       ID          #REQUIRED
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
-	           ditaarch:DITAArchVersion CDATA "1.3"
+	         ditaarch:DITAArchVersion CDATA "1.3"
              domains CDATA "&xdita-constraint; &included-domains;"
              outputclass  CDATA    #IMPLIED
              %localization;
@@ -145,6 +145,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Prolog-->
 <!ELEMENT prolog (%data;)* >
 <!ATTLIST prolog
+             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/prolog ">
 
@@ -329,6 +330,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Data  -->
 <!ELEMENT data             (#PCDATA|%data;)*        >
 <!ATTLIST data
+             %localization;
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
              href       CDATA                            #IMPLIED
@@ -351,6 +353,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Audio -->
 <!ELEMENT audio (fallback?, controls?, source*, track*)        >
 <!ATTLIST audio
+             %localization;
              %filters;
              %reuse;
              outputclass  CDATA          #IMPLIED
@@ -359,6 +362,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Video -->
 <!ELEMENT video (fallback?, controls?, poster?, source*, track*)        >
 <!ATTLIST video
+             %localization;
              %filters;
              %reuse;
              outputclass  CDATA          #IMPLIED
@@ -377,6 +381,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Display controls  -->
 <!ELEMENT controls 	EMPTY        >
 <!ATTLIST controls
+             %localization;
              name       CDATA   			#FIXED "controls"
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/controls ">
@@ -385,6 +390,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Poster image  -->
 <!ELEMENT poster		EMPTY        >
 <!ATTLIST poster
+             %localization;
              name       CDATA         #FIXED "poster"
              value      CDATA         #IMPLIED
              outputclass  CDATA          #IMPLIED
@@ -393,6 +399,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Source  -->
 <!ELEMENT source		EMPTY        >
 <!ATTLIST source
+             %localization;
              name       CDATA           #FIXED "source"
              value      CDATA           #IMPLIED
              outputclass  CDATA          #IMPLIED
@@ -401,6 +408,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Track for captions  -->
 <!ELEMENT track		EMPTY        >
 <!ATTLIST track
+             %localization;
              name       CDATA           #FIXED "track"
              value      CDATA           #IMPLIED
              outputclass  CDATA          #IMPLIED

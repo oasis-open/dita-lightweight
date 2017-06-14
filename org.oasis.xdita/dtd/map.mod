@@ -92,7 +92,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ELEMENT map		(topicmeta?, (topicref | keydef)*)  >
 <!ATTLIST map
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
-	     ditaarch:DITAArchVersion CDATA "1.3"
+	         ditaarch:DITAArchVersion CDATA "1.3"
              domains    CDATA                    "&xdita-constraint; &included-domains;"
              %localization;
              class CDATA "- map/map ">
@@ -101,6 +101,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Metadata-->
 <!ELEMENT topicmeta     (navtitle?, linktext?, data*) >
 <!ATTLIST topicmeta
+             %localization;
              class CDATA "- map/topicmeta ">
 
 <!--                    LONG NAME: Navigation title -->
@@ -118,6 +119,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Data  -->
 <!ELEMENT data             (#PCDATA|%data;)*        >
 <!ATTLIST data
+             %localization;
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
              href       CDATA                            #IMPLIED
@@ -168,17 +170,19 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Topic or Map Reference  -->
 <!ELEMENT topicref	(topicmeta?, topicref*)        >
 <!ATTLIST topicref
+             %localization;
              locktitle CDATA      			 #FIXED 'yes'
-	           %reuse;
+	         %reuse;
              %filters;
              %reference-content;
-	           %control-variables;
+	         %control-variables;
              %variable-links;
              class CDATA "- map/topicref ">
 
 <!--                    LONG NAME: Key Definition  -->
 <!ELEMENT keydef	(topicmeta?, data*)        >
 <!ATTLIST keydef
+              %localization;
               %filters;
               href
                         CDATA
