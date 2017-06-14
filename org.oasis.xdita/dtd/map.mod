@@ -36,6 +36,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--    13 Jun 2017  CE: Added XDITA constraint token              -->
 <!--    13 Jun 2017  CE: Made map ID optional                      -->
 <!--    13 Jun 2017  CE: Added props to <keydef>                   -->
+<!--    14 Jun 2017  CE: Added <image>, <alt>, and <xref> to <ph>  -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -57,7 +58,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    COMMON DECLARATIONS                       -->
 <!-- ============================================================= -->
 
-<!ENTITY % all-inline  "#PCDATA|%ph;|%data;">
+<!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
+<!ENTITY % all-inline  "#PCDATA|%ph;|alt|image|xref|%data;">
 
 
 <!--common attributes-->
@@ -129,6 +131,39 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              %localization;
              %variable-content;
              class CDATA "- topic/ph ">
+             
+<!--                    LONG NAME: Image  -->
+<!ELEMENT image             (alt?)        >
+<!ATTLIST image
+             href       CDATA                            #IMPLIED
+             height     NMTOKEN                          #IMPLIED
+             width      NMTOKEN                          #IMPLIED
+             %localization;
+             %variable-content;
+             outputclass  CDATA          #IMPLIED
+             class CDATA "- topic/image ">
+             
+             
+<!--                    LONG NAME: Alternative content  -->
+<!ELEMENT alt           (#PCDATA|%ph;|xref|%data;)*        >
+<!ATTLIST alt
+             %localization;
+             %variable-content;
+             outputclass  CDATA          #IMPLIED
+             class CDATA "- topic/alt ">
+             
+<!--                    LONG NAME: Reference  -->
+<!ELEMENT xref          (%common-inline;)*        >
+<!ATTLIST xref
+             href       CDATA                            #IMPLIED
+             format     CDATA                            #IMPLIED
+             scope      (local | peer | external)        #IMPLIED
+             %localization;
+             %variable-links;
+             outputclass  CDATA          #IMPLIED
+             class CDATA "- topic/xref ">
+
+
 
 <!--                    LONG NAME: Topic or Map Reference  -->
 <!ELEMENT topicref	(topicmeta?, topicref*)        >

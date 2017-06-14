@@ -79,7 +79,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!-- common content models -->
 
 <!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
-<!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
+<!ENTITY % all-inline  "#PCDATA|%ph;|alt|image|xref|%data;">
 <!ENTITY % simple-blocks  "p|ul|ol|dl|pre|audio|video|fn|note|%data;">
 <!ENTITY % fn-blocks  "p|ul|ol|dl|%data;">
 <!ENTITY % all-blocks  "p|ul|ol|dl|pre|audio|video|simpletable|fig|fn|note|%data;">
