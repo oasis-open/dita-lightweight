@@ -37,6 +37,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--    13 Jun 2017  CE: Made map ID optional                      -->
 <!--    13 Jun 2017  CE: Added props to <keydef>                   -->
 <!--    14 Jun 2017  CE: Added <image>, <alt>, and <xref> to <ph>  -->
+<!--    14 Jun 2017  CE: Added @format and @scope to elements with -->
+<!--                     @href                                     -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -121,6 +123,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
              href       CDATA                            #IMPLIED
+             format     CDATA                            #IMPLIED
+             scope      (local | peer | external)        #IMPLIED
              %variable-content;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
@@ -136,6 +140,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ELEMENT image             (alt?)        >
 <!ATTLIST image
              href       CDATA                            #IMPLIED
+             format     CDATA                            #IMPLIED
+             scope      (local | peer | external)        #IMPLIED
              height     NMTOKEN                          #IMPLIED
              width      NMTOKEN                          #IMPLIED
              %localization;

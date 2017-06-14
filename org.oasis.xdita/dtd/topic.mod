@@ -54,6 +54,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--    13 Jun 2017  CE: Modified <stentry>, <strow>, <dlentry>,   -->
 <!--                     and <li> to allow one-or-more             -->
 <!--    14 Jun 2017  CE: Removed <fn> from <body>                  -->
+<!--    14 Jun 2017  CE: Added @format and @scope to elements with -->
+<!--                     @href                                     -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -311,6 +313,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ELEMENT image             (alt?)        >
 <!ATTLIST image
              href       CDATA                            #IMPLIED
+             format     CDATA                            #IMPLIED
+             scope      (local | peer | external)        #IMPLIED
              height     NMTOKEN                          #IMPLIED
              width      NMTOKEN                          #IMPLIED
              %localization;
@@ -332,6 +336,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
              href       CDATA                            #IMPLIED
+             format     CDATA                            #IMPLIED
+             scope      (local | peer | external)        #IMPLIED
              %variable-content;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
