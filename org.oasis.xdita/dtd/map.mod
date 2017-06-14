@@ -36,11 +36,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--    13 Jun 2017  CE: Added XDITA constraint token              -->
 <!--    13 Jun 2017  CE: Made map ID optional                      -->
 <!--    13 Jun 2017  CE: Added props to <keydef>                   -->
-<!--    14 Jun 2017  CE: Added <image>, <alt>, and <xref> to <ph>  -->
-<!--    14 Jun 2017  CE: Added @format and @scope to elements with -->
-<!--                     @href                                     -->
-<!--    14 Jun 2017  CE: Added localization attributes to elements -->
-<!--                     that might include content                -->
+<!--    14 Jun 2017  CE: Added <image>, <xref> to <ph>; add <alt>  -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -63,7 +59,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!-- ============================================================= -->
 
 <!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
-<!ENTITY % all-inline  "#PCDATA|%ph;|alt|image|xref|%data;">
+<!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
 
 
 <!--common attributes-->
@@ -95,7 +91,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Map  -->
 <!ELEMENT map		(topicmeta?, (topicref | keydef)*)  >
 <!ATTLIST map
-              id       ID          #IMPLIED
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
 	     ditaarch:DITAArchVersion CDATA "1.3"
              domains    CDATA                    "&xdita-constraint; &included-domains;"
@@ -106,7 +101,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Metadata-->
 <!ELEMENT topicmeta     (navtitle?, linktext?, data*) >
 <!ATTLIST topicmeta
-             %localization;
              class CDATA "- map/topicmeta ">
 
 <!--                    LONG NAME: Navigation title -->
@@ -127,10 +121,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
              href       CDATA                            #IMPLIED
-             format     CDATA                            #IMPLIED
-             scope      (local | peer | external)        #IMPLIED
              %variable-content;
-             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
 
@@ -145,8 +136,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ELEMENT image             (alt?)        >
 <!ATTLIST image
              href       CDATA                            #IMPLIED
-             format     CDATA                            #IMPLIED
-             scope      (local | peer | external)        #IMPLIED
              height     NMTOKEN                          #IMPLIED
              width      NMTOKEN                          #IMPLIED
              %localization;
@@ -156,7 +145,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              
              
 <!--                    LONG NAME: Alternative content  -->
-<!ELEMENT alt           (#PCDATA|%ph;|xref|%data;)*        >
+<!ELEMENT alt           (#PCDATA|%ph;|%data;)*        >
 <!ATTLIST alt
              %localization;
              %variable-content;
@@ -182,7 +171,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              locktitle CDATA      			 #FIXED 'yes'
 	           %reuse;
              %filters;
-             %localization;
              %reference-content;
 	           %control-variables;
              %variable-links;
@@ -192,7 +180,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ELEMENT keydef	(topicmeta?, data*)        >
 <!ATTLIST keydef
               %filters;
-              %localization;
               href
                         CDATA
                                   #IMPLIED
