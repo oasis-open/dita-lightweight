@@ -32,6 +32,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!--    25 Nov 2014 KJE: Upload files to DITA TC SVN repo          -->
 <!--    16 May 2016  MG: Upload files to GitHub repo               -->
 <!--    11 Jun 2017 KJE: Added headers and update logs             -->
+<!--    14 Jun 2017 RDA: Added @outputclass                        -->
 <!-- ============================================================= -->
 
 <!--                    LONG NAME: Bold content  -->

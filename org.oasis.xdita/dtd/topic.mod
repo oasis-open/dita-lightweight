@@ -54,6 +54,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--    13 Jun 2017  CE: Modified <stentry>, <strow>, <dlentry>,   -->
 <!--                     and <li> to allow one-or-more             -->
 <!--    14 Jun 2017  CE: Removed <fn> from <body>                  -->
+<!--    14 Jun 2017 RDA: Corrected use of @outputclass             -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -93,6 +94,10 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ENTITY % reuse
             'id      NMTOKEN                            #IMPLIED
              conref  CDATA                              #IMPLIED  ' >
+<!ENTITY % reference-content
+            'href      CDATA                            #IMPLIED
+             format    CDATA                            #IMPLIED
+             scope     (local | peer | external)        #IMPLIED '>
 <!-- %fn-reuse; used for <fn> only, so you can remove this if you want -->
 <!ENTITY % fn-reuse
             'conref  CDATA                              #IMPLIED  ' >
@@ -310,7 +315,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Image  -->
 <!ELEMENT image             (alt?)        >
 <!ATTLIST image
-             href       CDATA                            #IMPLIED
+             %reference-content;
              height     NMTOKEN                          #IMPLIED
              width      NMTOKEN                          #IMPLIED
              %localization;
@@ -332,7 +337,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              %localization;
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
-             href       CDATA                            #IMPLIED
+             %reference-content;
              %variable-content;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
@@ -340,9 +345,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Reference  -->
 <!ELEMENT xref          (%common-inline;)*        >
 <!ATTLIST xref
-             href       CDATA                            #IMPLIED
-             format     CDATA                            #IMPLIED
-             scope      (local | peer | external)        #IMPLIED
+             %reference-content;
              %localization;
              %variable-links;
              outputclass  CDATA          #IMPLIED
