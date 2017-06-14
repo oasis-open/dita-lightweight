@@ -39,6 +39,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--    14 Jun 2017  CE: Added <image>, <alt>, and <xref> to <ph>  -->
 <!--    14 Jun 2017  CE: Added @format and @scope to elements with -->
 <!--                     @href                                     -->
+<!--    14 Jun 2017  CE: Added localization attributes to elements -->
+<!--                     that might include content                -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -103,6 +105,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Metadata-->
 <!ELEMENT topicmeta     (navtitle?, linktext?, data*) >
 <!ATTLIST topicmeta
+             %localization;
              class CDATA "- map/topicmeta ">
 
 <!--                    LONG NAME: Navigation title -->
@@ -126,6 +129,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              format     CDATA                            #IMPLIED
              scope      (local | peer | external)        #IMPLIED
              %variable-content;
+             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
 
@@ -177,6 +181,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              locktitle CDATA      			 #FIXED 'yes'
 	           %reuse;
              %filters;
+             %localization;
              %reference-content;
 	           %control-variables;
              %variable-links;
@@ -186,6 +191,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ELEMENT keydef	(topicmeta?, data*)        >
 <!ATTLIST keydef
               %filters;
+              %localization;
               href
                         CDATA
                                   #IMPLIED

@@ -56,6 +56,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--    14 Jun 2017  CE: Removed <fn> from <body>                  -->
 <!--    14 Jun 2017  CE: Added @format and @scope to elements with -->
 <!--                     @href                                     -->
+<!--    14 Jun 2017  CE: Added localization attributes to elements -->
+<!--                     that might include content                -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -147,6 +149,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                    LONG NAME: Prolog-->
 <!ELEMENT prolog (%data;)* >
 <!ATTLIST prolog
+             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/prolog ">
 
@@ -339,6 +342,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              format     CDATA                            #IMPLIED
              scope      (local | peer | external)        #IMPLIED
              %variable-content;
+             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
 
@@ -359,6 +363,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ATTLIST audio
              %filters;
              %reuse;
+             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/object h5m-d/audio ">
 
@@ -367,6 +372,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ATTLIST video
              %filters;
              %reuse;
+             %localization;
              outputclass  CDATA          #IMPLIED
              height     NMTOKEN                          #IMPLIED
              width      NMTOKEN                          #IMPLIED
@@ -393,6 +399,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ATTLIST poster
              name       CDATA         #FIXED "poster"
              value      CDATA         #IMPLIED
+             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/poster ">
 
@@ -401,6 +408,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ATTLIST source
              name       CDATA           #FIXED "source"
              value      CDATA           #IMPLIED
+             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/source ">
 
@@ -409,6 +417,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!ATTLIST track
              name       CDATA           #FIXED "track"
              value      CDATA           #IMPLIED
+             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/track ">
 
