@@ -53,7 +53,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--    13 Jun 2017  CE: Removed <image> from <pre>                -->
 <!--    13 Jun 2017  CE: Modified <stentry>, <strow>, <dlentry>,   -->
 <!--                     and <li> to allow one-or-more             -->
-
+<!--    14 Jun 2017  CE: Removed <fn> from <body>                  -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -150,7 +150,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 
 
 <!--                    LONG NAME: Body                  -->
-<!ELEMENT body          ((%all-blocks;)*, section*)        >
+<!ELEMENT body          ((%list-blocks;)*, section*)        >
 <!ATTLIST body
              %localization;
              outputclass  CDATA          #IMPLIED
