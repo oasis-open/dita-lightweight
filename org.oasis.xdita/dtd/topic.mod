@@ -54,7 +54,9 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--    13 Jun 2017  CE: Modified <stentry>, <strow>, <dlentry>,   -->
 <!--                     and <li> to allow one-or-more             -->
 <!--    14 Jun 2017  CE: Removed <fn> from <body>                  -->
-<!--    14 Jun 2017 RDA: Corrected use of @outputclass             -->
+<!--    14 Jun 2017 RDA: Corrected use of @outputclass,            -->
+<!--                     make localization attributes universal,   -->
+<!--                     add scope/format where needed             -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -113,10 +115,6 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              "scale ( 50|60|70|80|90|100|110|120|140|160|180|200 ) #IMPLIED
               frame ( all|bottom|none|sides|top|topbot )           #IMPLIED
               expanse ( column|page|spread|textline )              #IMPLIED">
-<!ENTITY % fig.attributes
-             "%display-atts;
-              %localization;
-              outputclass CDATA #IMPLIED">
 
 <!-- ============================================================= -->
 <!--                    ELEMENT DECLARATIONS                       -->
@@ -293,7 +291,9 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 
 <!ELEMENT fig   (title?, desc?, (%fig-blocks;|image|xref)*)    >
 <!ATTLIST fig
-             %fig.attributes;
+             %display-atts;
+             %localization;
+             outputclass CDATA #IMPLIED
              class CDATA "- topic/fig " >
 
 
