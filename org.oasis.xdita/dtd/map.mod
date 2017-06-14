@@ -36,11 +36,10 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--    13 Jun 2017  CE: Added XDITA constraint token              -->
 <!--    13 Jun 2017  CE: Made map ID optional                      -->
 <!--    13 Jun 2017  CE: Added props to <keydef>                   -->
-<!--    14 Jun 2017  CE: Added <image>, <alt>, and <xref> to <ph>  -->
-<!--    14 Jun 2017  CE: Added @format and @scope to elements with -->
-<!--                     @href                                     -->
-<!--    14 Jun 2017  CE: Added localization attributes to elements -->
-<!--                     that might include content                -->
+<!--    14 Jun 2017  CE: Added <image>, <xref> to <ph>; add <alt>  -->
+<!--    14 Jun 2017 RDA: Corrected use of @outputclass,            -->
+<!--                     make localization attributes universal,   -->
+<!--                     add scope/format where needed             -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -63,7 +62,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!-- ============================================================= -->
 
 <!ENTITY % common-inline  "#PCDATA|%ph;|image|%data;">
-<!ENTITY % all-inline  "#PCDATA|%ph;|alt|image|xref|%data;">
+<!ENTITY % all-inline  "#PCDATA|%ph;|image|xref|%data;">
 
 
 <!--common attributes-->
@@ -95,11 +94,12 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Map  -->
 <!ELEMENT map		(topicmeta?, (topicref | keydef)*)  >
 <!ATTLIST map
-              id       ID          #IMPLIED
+             id       ID          #IMPLIED
              xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
-	     ditaarch:DITAArchVersion CDATA "1.3"
+	         ditaarch:DITAArchVersion CDATA "1.3"
              domains    CDATA                    "&xdita-constraint; &included-domains;"
              %localization;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- map/map ">
 
 
@@ -113,24 +113,24 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ELEMENT navtitle (#PCDATA|%ph;)* >
 <!ATTLIST navtitle
              %localization;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/navtitle ">
 
 <!--                    LONG NAME: Link text-->
 <!ELEMENT linktext     (#PCDATA | %ph;)* >
 <!ATTLIST linktext
-            %localization;
+             %localization;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- map/linktext ">
 
 <!--                    LONG NAME: Data  -->
 <!ELEMENT data             (#PCDATA|%data;)*        >
 <!ATTLIST data
+             %localization;
              name       CDATA                            #IMPLIED
              value      CDATA                            #IMPLIED
-             href       CDATA                            #IMPLIED
-             format     CDATA                            #IMPLIED
-             scope      (local | peer | external)        #IMPLIED
+             %reference-content;
              %variable-content;
-             %localization;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/data ">
 
@@ -139,14 +139,13 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!ATTLIST ph
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- topic/ph ">
              
 <!--                    LONG NAME: Image  -->
 <!ELEMENT image             (alt?)        >
 <!ATTLIST image
-             href       CDATA                            #IMPLIED
-             format     CDATA                            #IMPLIED
-             scope      (local | peer | external)        #IMPLIED
+             %reference-content;
              height     NMTOKEN                          #IMPLIED
              width      NMTOKEN                          #IMPLIED
              %localization;
@@ -156,7 +155,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              
              
 <!--                    LONG NAME: Alternative content  -->
-<!ELEMENT alt           (#PCDATA|%ph;|xref|%data;)*        >
+<!ELEMENT alt           (#PCDATA|%ph;|%data;)*        >
 <!ATTLIST alt
              %localization;
              %variable-content;
@@ -166,9 +165,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Reference  -->
 <!ELEMENT xref          (%common-inline;)*        >
 <!ATTLIST xref
-             href       CDATA                            #IMPLIED
-             format     CDATA                            #IMPLIED
-             scope      (local | peer | external)        #IMPLIED
+             %reference-content;
              %localization;
              %variable-links;
              outputclass  CDATA          #IMPLIED
@@ -179,29 +176,27 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                    LONG NAME: Topic or Map Reference  -->
 <!ELEMENT topicref	(topicmeta?, topicref*)        >
 <!ATTLIST topicref
-             locktitle CDATA      			 #FIXED 'yes'
-	           %reuse;
-             %filters;
              %localization;
+             locktitle CDATA      			 #FIXED 'yes'
+	         %reuse;
+             %filters;
              %reference-content;
-	           %control-variables;
+	         %control-variables;
              %variable-links;
+             outputclass  CDATA          #IMPLIED
              class CDATA "- map/topicref ">
 
 <!--                    LONG NAME: Key Definition  -->
 <!ELEMENT keydef	(topicmeta?, data*)        >
 <!ATTLIST keydef
-              %filters;
               %localization;
-              href
-                        CDATA
-                                  #IMPLIED
-              format     CDATA                            #IMPLIED
-              scope      (local | peer | external)        #IMPLIED
+              %filters;
+              %reference-content;
               keys
                         CDATA
                                   #REQUIRED
               processing-role
                         CDATA       #FIXED      'resource-only'
+              outputclass  CDATA          #IMPLIED
               class CDATA "+ map/topicref mapgroup-d/keydef "
 >

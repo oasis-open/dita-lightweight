@@ -32,6 +32,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!--    25 Nov 2014 KJE: Upload files to DITA TC SVN repo          -->
 <!--    16 May 2016  MG: Upload files to GitHub repo               -->
 <!--    11 Jun 2017 KJE: Added headers and update logs             -->
+<!--    14 Jun 2017 RDA: Added @outputclass                        -->
 <!-- ============================================================= -->
 
 <!--                    LONG NAME: Bold content  -->
@@ -39,6 +40,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST b
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/b ">
 
 <!--                    LONG NAME: Italic content  -->
@@ -46,6 +48,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST i
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/i ">
 
 <!--                    LONG NAME: Underlined content  -->
@@ -53,6 +56,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST u
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/u ">
 
 <!--                    LONG NAME: Superscript content  -->
@@ -60,6 +64,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST sup
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/sup ">
 
 <!--                    LONG NAME: Subscript content  -->
@@ -67,4 +72,5 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!ATTLIST sub
              %localization;
              %variable-content;
+             outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/ph hi-d/sub ">
