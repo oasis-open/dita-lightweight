@@ -196,6 +196,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
               href
                         CDATA
                                   #IMPLIED
+              format     CDATA                            #IMPLIED
+              scope      (local | peer | external)        #IMPLIED
               keys
                         CDATA
                                   #REQUIRED
