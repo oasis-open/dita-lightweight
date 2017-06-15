@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD XDITA Map//EN" "map.dtd">
+<map id="rlnmap">
+  <topicmeta>
+    <navtitle>Remote Lighting Network</navtitle>
+  </topicmeta>
+
+  <keydef keys="product-name">
+  <topicmeta>
+    <linktext>Remote Lighting Network</linktext>
+  </topicmeta>
+  </keydef>
+  <topicref href="xdita/t-program-bulbs-to-groups.dita" />
+  
+  <!-- <topicref href="topics/intro-product.html" format="html"/>
+ <topicref href="references/r-remote-components.md" format="markdown"/>
+  <topicref href="concepts/c-intro-network-lighting.html" format="html">
+    <topicref href="concepts/c-intro-max-number.html" format="html"/>
+    <topicref href="concepts/c-low-power.html" format="html"/>
+  </topicref>
+  <topicref href="concepts/c-considerations.html" format="html"/>
+  <topicref href="tasks/xdita/t-program-bulbs-to-groups.dita" format="dita"/>
+  <topicref href="tasks/dita/t-turn-on-off-dim-lights.dita" format="dita"/>
+  <topicref href="references/r-specifications-overview.md" format="markdown">
+    <topicref href="references/r-specifications-remote.md" keys="remote-specs" format="markdown"/>
+    <topicref href="references/r-specifications-led.md" keys="led-specs" format="markdown"/>
+  </topicref>
+  -->
+</map>
