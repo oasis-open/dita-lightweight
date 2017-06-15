@@ -2,9 +2,9 @@
 id: led-specifications
 ---
 
-# LED Light Bulb Specifications {#led-specifications}
+# LED Light Bulb Specifications
 
-<p data-hd-class="shortdesc">Specifications describing the electronics and technology inside the LED light bulb.</p>
+Specifications describing the electronics and technology inside the LED light bulb.
 
 |Feature|Specification|
 |-------|-------------|
@@ -15,4 +15,4 @@ id: led-specifications
 |Power Factor|\>0.7|
 |Energy|Energy Star Certified / EEL Rating: A|
 
-<p data-hd-conref="intro-product.html#intro-product/warning" />
+<p data-hd-conref="intro-product.dita#intro-product/warning" />

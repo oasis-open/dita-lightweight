@@ -22,9 +22,9 @@
           <ol>
             <li><p>Make sure power to the fixture where you are installing the light bulb
               is turned OFF.</p>
-              <!--
-              <p conref="intro-product.html#intro-product/warning" />
-              -->
+              
+              <p conref="intro-product.dita#intro-product/warning" />
+             
             </li>
               <li><p>Remove any existing light bulb from the light fixture.</p></li>
               <li><p>Install the network light bulb into the light fixture as you would any

@@ -1,0 +1,12 @@
+---
+id: product-specs
+---
+
+# Product Specifications
+
+The <span data-hd-keyref="product-name" />components have specific electronic and technical specifications.
+
+The components in your lighting network have electronic and technical specifications that are specific to the component type.
+
+-   [../xdita/remote-specs.dita]. Specifications describing the electronics and technology inside the remote control.
+-   [../xdita/led-specs.dita]. Specifications describing the electronics and technology inside the LED light bulb.
