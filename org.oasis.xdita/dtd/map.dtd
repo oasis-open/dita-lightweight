@@ -32,6 +32,7 @@ PUBLIC "-//OASIS//DTD XDITA Map//EN"
 <!--    16 May 2016  MG: Upload files to GitHub repo               -->
 <!--    11 Jun 2017 KJE: Added headers and update logs             -->
 <!--    14 Jun 2017 RDA: Add mapgroup to domains attribute         -->
+<!--    20 Jun 2017  CE: Replaced domain from hi-d to topic hi-d   -->
 <!-- ============================================================= -->
 
 <!-- ============================================================= -->
@@ -55,7 +56,7 @@ PUBLIC "-//OASIS//DTD XDITA Map//EN"
 <!--                    DECLARE USE OF ELEMENT/ATTRIBUTE DOMAINS                 -->
 <!-- ============================================================= -->
 
-<!ENTITY included-domains                         "(hi-d) (map mapgroup-d)">
+<!ENTITY included-domains                         "(topic hi-d) (map mapgroup-d)">
 
 <!-- ============================================================= -->
 <!--                    REMOVE ATTRIBUTE/ELEMENT GROUPS                    -->
