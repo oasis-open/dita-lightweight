@@ -1,7 +1,7 @@
 <!-- ============================================================= -->
 <!--                    HEADER                                     -->
 <!-- ============================================================= -->
-<!--  MODULE:    Lightweight DITA Topic                            -->
+<!--  MODULE:    Lightweight DITA Map                              -->
 <!--  VERSION:   1.0                                               -->
 <!--  DATE:      XXX                                               -->
 <!--                                                               -->
@@ -11,15 +11,15 @@
 <!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
 <!--                    TYPICAL INVOCATION                         -->
 <!--                                                               -->
-<!--  Refer to this file by the following public identifier or an
+  <!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
-PUBLIC "-//OASIS//DTD XDITA Topic//EN"
-      Delivered as file "topic.dtd"                                -->
+PUBLIC "-//OASIS//DTD XDITA Map//EN"
+      Delivered as file "lw-map.dtd"                                  -->
 
 <!-- ============================================================= -->
 <!-- SYSTEM:     Lightweight DITA                                  -->
 <!--                                                               -->
-<!-- PURPOSE:    DTD to describe Lightweight DITA topic            -->
+<!-- PURPOSE:    DTD to describe Lightweight DITA map              -->
 <!--                                                               -->
 <!-- ORIGINAL CREATION DATE:                                       -->
 <!--             XXXX                                              -->
@@ -30,10 +30,11 @@ PUBLIC "-//OASIS//DTD XDITA Topic//EN"
 <!--  UPDATES:                                                     -->
 <!--    25 Nov 2014 KJE: Upload files to DITA TC SVN repo          -->
 <!--    16 May 2016  MG: Upload files to GitHub repo               -->
-<!--    03 Apr 2017  CE: Added XDITA constraint token              -->
 <!--    11 Jun 2017 KJE: Added headers and update logs             -->
+<!--    14 Jun 2017 RDA: Add mapgroup to domains attribute         -->
+<!--    20 Jun 2017  CE: Replaced domain from hi-d to topic hi-d   -->
+<!--    20 Jun 2017  CE: Added prefix lw- to filename              -->
 <!-- ============================================================= -->
-
 
 <!-- ============================================================= -->
 <!--                    ADD PHRASE ELEMENTS                        -->
@@ -56,7 +57,7 @@ PUBLIC "-//OASIS//DTD XDITA Topic//EN"
 <!--                    DECLARE USE OF ELEMENT/ATTRIBUTE DOMAINS                 -->
 <!-- ============================================================= -->
 
-<!ENTITY included-domains                         "(topic hi-d) (topic h5m-d)"           >
+<!ENTITY included-domains                         "(topic hi-d) (map mapgroup-d)">
 
 <!-- ============================================================= -->
 <!--                    REMOVE ATTRIBUTE/ELEMENT GROUPS                    -->
@@ -68,8 +69,9 @@ PUBLIC "-//OASIS//DTD XDITA Topic//EN"
 <!--ENTITY % reuse " " -->
 <!--ENTITY % variable-content " " -->
 <!--ENTITY % variable-links " " -->
+<!--ENTITY % reference-content " " -->
+<!--ENTITY % control-variables " " -->
 <!--ENTITY % localization " " -->
-<!--ENTITY % nested-blocks "p" -->
 
 <!--For each group removed add a corresponding constraint value to
     the excluded-domains entity. The constraint name should be "no-"
@@ -80,17 +82,14 @@ PUBLIC "-//OASIS//DTD XDITA Topic//EN"
 <!ENTITY excluded-domains                         " "                >
 
 <!-- ============================================================= -->
-<!--                    INCLUDE TOPIC AND SECTION MODULES          -->
+<!--                    INCLUDE MAP MODULE          -->
 <!-- ============================================================= -->
 
-<!--                    Embed topic module to get generic elements -->
-<!ENTITY % topic-type   PUBLIC
-"-//OASIS//ELEMENTS XDITA Topic//EN"
-"topic.mod"                                                          >
-%topic-type;
-
-<!--                    Embed section modules                      -->
-<!-- none -->
+<!--                    Embed map module to get generic elements -->
+<!ENTITY % map-type     PUBLIC
+"-//OASIS//ELEMENTS XDITA Map//EN"
+"map.mod"                                                            >
+%map-type;
 
 
 <!-- ============================================================= -->
@@ -103,4 +102,4 @@ PUBLIC "-//OASIS//DTD XDITA Topic//EN"
 %hi-d-def;
 
 
-<!-- ================== End XDITA Topic DTD  ====================== -->
+<!-- ================== End XDITA Map DTD  ====================== -->

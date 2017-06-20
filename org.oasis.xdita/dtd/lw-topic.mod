@@ -14,7 +14,7 @@
 <!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
 PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
-      Delivered as file "topic.mod"                                -->
+      Delivered as file "lw-topic.mod"                                -->
 
 <!-- ============================================================= -->
 <!-- SYSTEM:     Lightweight DITA                                  -->
@@ -57,6 +57,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--    14 Jun 2017 RDA: Corrected use of @outputclass,            -->
 <!--                     make localization attributes universal,   -->
 <!--                     add scope/format where needed             -->
+<!--    20 Jun 2017  CE: Added prefix lw- to filename              -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->

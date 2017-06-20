@@ -14,7 +14,7 @@
 <!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
 PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
-      Delivered as file "map.mod"                                  -->
+      Delivered as file "lw-map.mod"                                  -->
 
 <!-- ============================================================= -->
 <!-- SYSTEM:     Lightweight DITA                                  -->
@@ -40,6 +40,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--    14 Jun 2017 RDA: Corrected use of @outputclass,            -->
 <!--                     make localization attributes universal,   -->
 <!--                     add scope/format where needed             -->
+<!--    20 Jun 2017  CE: Added prefix lw- to filename              -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -141,7 +142,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              %variable-content;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/ph ">
-             
+
 <!--                    LONG NAME: Image  -->
 <!ELEMENT image             (alt?)        >
 <!ATTLIST image
@@ -152,8 +153,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              %variable-content;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/image ">
-             
-             
+
+
 <!--                    LONG NAME: Alternative content  -->
 <!ELEMENT alt           (#PCDATA|%ph;|%data;)*        >
 <!ATTLIST alt
@@ -161,7 +162,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
              %variable-content;
              outputclass  CDATA          #IMPLIED
              class CDATA "- topic/alt ">
-             
+
 <!--                    LONG NAME: Reference  -->
 <!ELEMENT xref          (%common-inline;)*        >
 <!ATTLIST xref
