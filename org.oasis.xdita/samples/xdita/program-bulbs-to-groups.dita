@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD XDITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD XDITA Topic//EN" "lw-topic.dtd">
 <topic id="program-bulbs-to-groups">
   <title>Programming Light Bulbs to a Lighting Group</title>
   <shortdesc>You can program one or more light bulbs to a lighting group to operate that group
@@ -22,9 +22,9 @@
           <ol>
             <li><p>Make sure power to the fixture where you are installing the light bulb
               is turned OFF.</p>
-              
+
               <p conref="intro-product.dita#intro-product/warning" />
-             
+
             </li>
               <li><p>Remove any existing light bulb from the light fixture.</p></li>
               <li><p>Install the network light bulb into the light fixture as you would any
@@ -50,6 +50,6 @@
           excluded fixtures that you turned off.</p></li>
     </ol>
     </section>
-  
+
   </body>
 </topic>

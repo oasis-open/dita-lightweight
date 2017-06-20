@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD XDITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD XDITA Topic//EN" "lw-topic.dtd">
 <topic id="intro-product">
   <title><ph keyref="product-name"/> Overview</title>
   <shortdesc>The <ph keyref="product-name"/> kit allows you to operate network-based home lighting through a remote control</shortdesc>
@@ -20,8 +20,8 @@
       <title><ph keyref="product-name"/> ready for installation</title>
       <image href="../images/kit.png"><alt>Remote Lighting Kit</alt></image>
      </fig>
-    
+
     <p id="warning">Electrical hazards can cause burns, shocks and electrocution (death).</p>
-    
+
   </body>
 </topic>

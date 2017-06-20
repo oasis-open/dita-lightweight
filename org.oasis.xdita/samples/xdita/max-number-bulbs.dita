@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD XDITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD XDITA Topic//EN" "lw-topic.dtd">
 <topic id="max-number-bulbs">
   <title>Maximum Number of Network Light Bulbs</title>
   <shortdesc>Testing shows you should network no more than 250 light bulbs to maintain reliable performance.</shortdesc>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD XDITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD XDITA Topic//EN" "lw-topic.dtd">
 <topic id="remote-specs">
   <title>Remote Control Specifications</title>
   <shortdesc>Specifications describing the electronics and technology inside the remote control.</shortdesc>
