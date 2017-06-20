@@ -87,7 +87,7 @@ PUBLIC "-//OASIS//DTD XDITA Topic//EN"
 <!--                    Embed topic module to get generic elements -->
 <!ENTITY % topic-type   PUBLIC
 "-//OASIS//ELEMENTS XDITA Topic//EN"
-"topic.mod"                                                          >
+"lw-topic.mod"                                                          >
 %topic-type;
 
 <!--                    Embed section modules                      -->
