@@ -58,6 +58,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                     make localization attributes universal,   -->
 <!--                     add scope/format where needed             -->
 <!--    20 Jun 2017  CE: Added prefix lw- to filename              -->
+<!--    27 Jun 2017  CE: Added <footnotes>                         -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -427,6 +428,16 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              outputclass CDATA          #IMPLIED
              id          NMTOKEN        #REQUIRED
              class       CDATA "- topic/fn ">
+
+<!--                    LONG NAME: Footnotes  -->
+<!ELEMENT footnotes ( %simple-blocks; )*  >
+<!ATTLIST footnotes
+             %localization;
+             %filters;
+             %reuse;
+             outputclass  CDATA          #IMPLIED
+             class        CDATA "- topic/footnotes "
+             >
 
 
 <!--                    LONG NAME: Note  -->
