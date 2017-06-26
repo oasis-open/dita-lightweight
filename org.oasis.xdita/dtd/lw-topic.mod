@@ -430,7 +430,7 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
              class       CDATA "- topic/fn ">
 
 <!--                    LONG NAME: Footnotes  -->
-<!ELEMENT footnotes ( %simple-blocks; )*  >
+<!ELEMENT footnotes (fn)+   >
 <!ATTLIST footnotes
              %localization;
              %filters;
