@@ -15,4 +15,4 @@ Specifications describing the electronics and technology inside the LED light bu
 |Power Factor|\>0.7|
 |Energy|Energy Star Certified / EEL Rating: A|
 
-<p data-hd-conref="intro-product.dita#intro-product/warning" />
+<p data-conref="intro-product.dita#intro-product/warning" />
