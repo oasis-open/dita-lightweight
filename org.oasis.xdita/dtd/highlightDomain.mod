@@ -13,7 +13,7 @@
 <!--                                                               -->
 <!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
-PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
+PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Highlight Domain//EN"
       Delivered as file "highlightDomain.mod"                      -->
 
 <!-- ============================================================= -->
@@ -33,6 +33,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Highlight Domain//EN"
 <!--    16 May 2016  MG: Upload files to GitHub repo               -->
 <!--    11 Jun 2017 KJE: Added headers and update logs             -->
 <!--    14 Jun 2017 RDA: Added @outputclass                        -->
+<!--    25 Jul 2017  CE: Changed public identifier to LIGHTWEIGHT  -->
+<!--                     DITA                                      -->
 <!-- ============================================================= -->
 
 <!--                    LONG NAME: Bold content  -->

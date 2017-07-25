@@ -13,7 +13,7 @@
 <!--                                                               -->
 <!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
-PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
+PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
       Delivered as file "lw-topic.mod"                                -->
 
 <!-- ============================================================= -->
@@ -59,6 +59,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Topic//EN"
 <!--                     add scope/format where needed             -->
 <!--    20 Jun 2017  CE: Added prefix lw- to filename              -->
 <!--    27 Jun 2017  CE: Added <footnotes>                         -->
+<!--    25 Jul 2017  CE: Changed public identifier to LIGHTWEIGHT  -->
+<!--                     DITA                                      -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->

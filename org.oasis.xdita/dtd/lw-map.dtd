@@ -13,7 +13,7 @@
 <!--                                                               -->
   <!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
-PUBLIC "-//OASIS//DTD XDITA Map//EN"
+PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Map//EN"
       Delivered as file "lw-map.dtd"                                  -->
 
 <!-- ============================================================= -->
@@ -34,6 +34,8 @@ PUBLIC "-//OASIS//DTD XDITA Map//EN"
 <!--    14 Jun 2017 RDA: Add mapgroup to domains attribute         -->
 <!--    20 Jun 2017  CE: Replaced domain from hi-d to topic hi-d   -->
 <!--    20 Jun 2017  CE: Added prefix lw- to filename              -->
+<!--    25 Jul 2017  CE: Changed public identifier to LIGHTWEIGHT  -->
+<!--                     DITA                                      -->
 <!-- ============================================================= -->
 
 <!-- ============================================================= -->
@@ -87,7 +89,7 @@ PUBLIC "-//OASIS//DTD XDITA Map//EN"
 
 <!--                    Embed map module to get generic elements -->
 <!ENTITY % map-type     PUBLIC
-"-//OASIS//ELEMENTS XDITA Map//EN"
+"-//OASIS//ELEMENTS LIGHTWEIGHT DITA Map//EN"
 "lw-map.mod"                                                            >
 %map-type;
 
@@ -97,9 +99,9 @@ PUBLIC "-//OASIS//DTD XDITA Map//EN"
 <!-- ============================================================= -->
 
 <!ENTITY % hi-d-def     PUBLIC
-" -//OASIS//ELEMENTS XDITA Highlight Domain//EN"
+" -//OASIS//ELEMENTS LIGHTWEIGHT DITA Highlight Domain//EN"
 "highlightDomain.mod"                                                >
 %hi-d-def;
 
 
-<!-- ================== End XDITA Map DTD  ====================== -->
+<!-- ============= End LIGHTWEIGHT DITA Map DTD  ================= -->

@@ -13,8 +13,8 @@
 <!--                                                               -->
 <!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
-PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
-      Delivered as file "lw-map.mod"                                  -->
+PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Map//EN"
+      Delivered as file "lw-map.mod"                               -->
 
 <!-- ============================================================= -->
 <!-- SYSTEM:     Lightweight DITA                                  -->
@@ -41,6 +41,8 @@ PUBLIC "-//OASIS//ELEMENTS XDITA Map//EN"
 <!--                     make localization attributes universal,   -->
 <!--                     add scope/format where needed             -->
 <!--    20 Jun 2017  CE: Added prefix lw- to filename              -->
+<!--    25 Jul 2017  CE: Changed public identifier to LIGHTWEIGHT  -->
+<!--                     DITA                                      -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->

@@ -13,8 +13,8 @@
 <!--                                                               -->
 <!--  Refer to this file by the following public identifier or an
       appropriate system identifier:
-PUBLIC "-//OASIS//DTD XDITA Topic//EN"
-      Delivered as file "lw-topic.dtd"                                -->
+PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN"
+      Delivered as file "lw-topic.dtd"                             -->
 
 <!-- ============================================================= -->
 <!-- SYSTEM:     Lightweight DITA                                  -->
@@ -33,6 +33,8 @@ PUBLIC "-//OASIS//DTD XDITA Topic//EN"
 <!--    03 Apr 2017  CE: Added XDITA constraint token              -->
 <!--    11 Jun 2017 KJE: Added headers and update logs             -->
 <!--    20 Jun 2017  CE: Added prefix lw- to filename              -->
+<!--    25 Jul 2017  CE: Changed public identifier to LIGHTWEIGHT  -->
+<!--                     DITA                                      -->
 <!-- ============================================================= -->
 
 
@@ -86,8 +88,8 @@ PUBLIC "-//OASIS//DTD XDITA Topic//EN"
 
 <!--                    Embed topic module to get generic elements -->
 <!ENTITY % topic-type   PUBLIC
-"-//OASIS//ELEMENTS XDITA Topic//EN"
-"lw-topic.mod"                                                          >
+"-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
+"lw-topic.mod"                                                       >
 %topic-type;
 
 <!--                    Embed section modules                      -->
@@ -99,9 +101,9 @@ PUBLIC "-//OASIS//DTD XDITA Topic//EN"
 <!-- ============================================================= -->
 
 <!ENTITY % hi-d-def     PUBLIC
-" -//OASIS//ELEMENTS XDITA Highlight Domain//EN"
+" -//OASIS//ELEMENTS LIGHTWEIGHT DITA Highlight Domain//EN"
 "highlightDomain.mod"                                                >
 %hi-d-def;
 
 
-<!-- ================== End XDITA Topic DTD  ====================== -->
+<!-- ============== End LIGHTWEIGHT DITA Topic DTD  =============== -->
