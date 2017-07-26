@@ -438,7 +438,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
              %filters;
              %reuse;
              outputclass  CDATA          #IMPLIED
-             class        CDATA "- topic/footnotes "
+             class        CDATA "- topic/section "
              >
 
 
