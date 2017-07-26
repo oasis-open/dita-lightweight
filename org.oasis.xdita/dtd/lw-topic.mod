@@ -157,7 +157,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 
 
 <!--                    LONG NAME: Body                  -->
-<!ELEMENT body          ((%list-blocks;)*, section*, footnotes)        >
+<!ELEMENT body          ((%list-blocks;)*, section*, footnotes*)        >
 <!ATTLIST body
              %localization;
              outputclass  CDATA          #IMPLIED
