@@ -361,7 +361,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 
 
 <!--                    LONG NAME: Audio -->
-<!ELEMENT audio (desc?, media-controls?, media-source*, media-track*)        >
+<!ELEMENT audio (desc?, media-controls?, media-source*, media-track*, media-autoplay?, media-loop?, media-muted?)        >
 <!ATTLIST audio
              %localization;
              %filters;
@@ -370,7 +370,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
              class CDATA "+ topic/object h5m-d/audio ">
 
 <!--                    LONG NAME: Video -->
-<!ELEMENT video (desc?, media-controls?, video-poster?, media-source*, media-track*)        >
+<!ELEMENT video (desc?, media-controls?, video-poster?, media-source*, media-track*, media-autoplay?, media-loop?, media-muted?)        >
 <!ATTLIST video
              %localization;
              %filters;
@@ -390,6 +390,30 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/media-controls ">
 <!-- value      CDATA         (y|n)  "y" -->
+
+<!--                    LONG NAME: Media autoplay  -->
+<!ELEMENT media-autoplay 	EMPTY        >
+<!ATTLIST media-autoplay
+             %localization;
+             name       CDATA   			#FIXED "media-autoplay"
+             outputclass  CDATA          #IMPLIED
+             class CDATA "+ topic/param h5m-d/media-autoplay ">
+             
+<!--                    LONG NAME: <Media loop  -->
+<!ELEMENT media-loop 	EMPTY        >
+<!ATTLIST media-loop
+             %localization;
+             name       CDATA   			#FIXED "media-loop"
+             outputclass  CDATA          #IMPLIED
+             class CDATA "+ topic/param h5m-d/media-loop ">
+             
+<!--                    LONG NAME: Media muted  -->
+<!ELEMENT media-muted 	EMPTY        >
+<!ATTLIST media-muted
+             %localization;
+             name       CDATA   			#FIXED "media-muted"
+             outputclass  CDATA          #IMPLIED
+             class CDATA "+ topic/param h5m-d/media-muted ">
 
 <!--                    LONG NAME: Poster image  -->
 <!ELEMENT video-poster		EMPTY        >
