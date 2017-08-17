@@ -61,6 +61,10 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 <!--    27 Jun 2017  CE: Added <footnotes>                         -->
 <!--    25 Jul 2017  CE: Changed public identifier to LIGHTWEIGHT  -->
 <!--                     DITA                                      -->
+<!--    17 Aug 2017  CE: Deleted <footnotes> and added <fn> to the -->
+<!--                     <body> content model                      -->
+<!--    17 Aug 2017  CE: Renamed multimedia elements after 2.0     -->
+<!--                     multimedia domain proposal                -->
 <!-- ============================================================= -->
 <!-- ============================================================= -->
 <!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
@@ -157,7 +161,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 
 
 <!--                    LONG NAME: Body                  -->
-<!ELEMENT body          ((%list-blocks;)*, section*, footnotes*)        >
+<!ELEMENT body          ((%list-blocks;)*, section*, fn*)        >
 <!ATTLIST body
              %localization;
              outputclass  CDATA          #IMPLIED
@@ -357,7 +361,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 
 
 <!--                    LONG NAME: Audio -->
-<!ELEMENT audio (fallback?, controls?, source*, track*)        >
+<!ELEMENT audio (desc?, media-controls?, media-source*, media-track*)        >
 <!ATTLIST audio
              %localization;
              %filters;
@@ -366,7 +370,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
              class CDATA "+ topic/object h5m-d/audio ">
 
 <!--                    LONG NAME: Video -->
-<!ELEMENT video (fallback?, controls?, poster?, source*, track*)        >
+<!ELEMENT video (desc?, media-controls?, video-poster?, media-source*, media-track*)        >
 <!ATTLIST video
              %localization;
              %filters;
@@ -374,51 +378,45 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
              outputclass  CDATA          #IMPLIED
              height     NMTOKEN                          #IMPLIED
              width      NMTOKEN                          #IMPLIED
-             iframe (yes|no) "no"
              class CDATA "+ topic/object h5m-d/video ">
 
-<!--                    LONG NAME: Fallback -->
-<!ELEMENT fallback		(%common-inline;)*        >
-<!ATTLIST fallback
-             %localization;
-             outputclass  CDATA          #IMPLIED
-             class CDATA "+ topic/desc h5m-d/fallback ">
+
 
 <!--                    LONG NAME: Display controls  -->
-<!ELEMENT controls 	EMPTY        >
-<!ATTLIST controls
+<!ELEMENT media-controls 	EMPTY        >
+<!ATTLIST media-controls
              %localization;
-             name       CDATA   			#FIXED "controls"
+             name       CDATA   			#FIXED "media-controls"
              outputclass  CDATA          #IMPLIED
-             class CDATA "+ topic/param h5m-d/controls ">
+             class CDATA "+ topic/param h5m-d/media-controls ">
 <!-- value      CDATA         (y|n)  "y" -->
 
 <!--                    LONG NAME: Poster image  -->
-<!ELEMENT poster		EMPTY        >
-<!ATTLIST poster
+<!ELEMENT video-poster		EMPTY        >
+<!ATTLIST video-poster
              %localization;
-             name       CDATA         #FIXED "poster"
+             name       CDATA         #FIXED "video-poster"
              value      CDATA         #IMPLIED
              outputclass  CDATA          #IMPLIED
-             class CDATA "+ topic/param h5m-d/poster ">
+             class CDATA "+ topic/param h5m-d/video-poster ">
 
 <!--                    LONG NAME: Source  -->
-<!ELEMENT source		EMPTY        >
-<!ATTLIST source
+<!ELEMENT media-source		EMPTY        >
+<!ATTLIST media-source
              %localization;
-             name       CDATA           #FIXED "source"
+             name       CDATA           #FIXED "media-source"
              value      CDATA           #IMPLIED
              outputclass  CDATA          #IMPLIED
-             class CDATA "+ topic/param h5m-d/source ">
+             class CDATA "+ topic/param h5m-d/media-source ">
 
 <!--                    LONG NAME: Track for captions  -->
-<!ELEMENT track		EMPTY        >
-<!ATTLIST track
+<!ELEMENT media-track		EMPTY        >
+<!ATTLIST media-track
              %localization;
-             name       CDATA           #FIXED "track"
+             name       CDATA           #FIXED "media-track"
              value      CDATA           #IMPLIED
              outputclass  CDATA          #IMPLIED
-             class CDATA "+ topic/param h5m-d/track ">
+             class CDATA "+ topic/param h5m-d/media-track ">
 
 <!--                    LONG NAME: Footnote  -->
 <!ELEMENT fn ( %fn-blocks; )*  >
@@ -431,15 +429,6 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
              id          NMTOKEN        #REQUIRED
              class       CDATA "- topic/fn ">
 
-<!--                    LONG NAME: Footnotes  -->
-<!ELEMENT footnotes (fn)+   >
-<!ATTLIST footnotes
-             %localization;
-             %filters;
-             %reuse;
-             outputclass  CDATA          #IMPLIED
-             class        CDATA "- topic/section "
-             >
 
 
 <!--                    LONG NAME: Note  -->
