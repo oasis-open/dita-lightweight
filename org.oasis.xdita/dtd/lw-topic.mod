@@ -361,7 +361,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 
 
 <!--                    LONG NAME: Audio -->
-<!ELEMENT audio (desc?, media-controls?, media-source*, media-track*, media-autoplay?, media-loop?, media-muted?)        >
+<!ELEMENT audio (desc?, media-controls?, media-autoplay?, media-loop?, media-muted?, media-source*, media-track*)        >
 <!ATTLIST audio
              %localization;
              %filters;
@@ -370,7 +370,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
              class CDATA "+ topic/object h5m-d/audio ">
 
 <!--                    LONG NAME: Video -->
-<!ELEMENT video (desc?, media-controls?, video-poster?, media-source*, media-track*, media-autoplay?, media-loop?, media-muted?)        >
+<!ELEMENT video (desc?, video-poster?, media-controls?, media-autoplay?, media-loop?, media-muted?, media-source*, media-track*)        >
 <!ATTLIST video
              %localization;
              %filters;
@@ -386,7 +386,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 <!ELEMENT media-controls 	EMPTY        >
 <!ATTLIST media-controls
              %localization;
-             name       CDATA   			#FIXED "media-controls"
+             name       CDATA   			#FIXED "controls"
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/media-controls ">
 <!-- value      CDATA         (y|n)  "y" -->
@@ -395,23 +395,23 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 <!ELEMENT media-autoplay 	EMPTY        >
 <!ATTLIST media-autoplay
              %localization;
-             name       CDATA   			#FIXED "media-autoplay"
+             name       CDATA   			#FIXED "autoplay"
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/media-autoplay ">
-             
+
 <!--                    LONG NAME: <Media loop  -->
 <!ELEMENT media-loop 	EMPTY        >
 <!ATTLIST media-loop
              %localization;
-             name       CDATA   			#FIXED "media-loop"
+             name       CDATA   			#FIXED "loop"
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/media-loop ">
-             
+
 <!--                    LONG NAME: Media muted  -->
 <!ELEMENT media-muted 	EMPTY        >
 <!ATTLIST media-muted
              %localization;
-             name       CDATA   			#FIXED "media-muted"
+             name       CDATA   			#FIXED "muted"
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/media-muted ">
 
@@ -419,7 +419,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 <!ELEMENT video-poster		EMPTY        >
 <!ATTLIST video-poster
              %localization;
-             name       CDATA         #FIXED "video-poster"
+             name       CDATA         #FIXED "poster"
              value      CDATA         #IMPLIED
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/video-poster ">
@@ -428,7 +428,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 <!ELEMENT media-source		EMPTY        >
 <!ATTLIST media-source
              %localization;
-             name       CDATA           #FIXED "media-source"
+             name       CDATA           #FIXED "source"
              value      CDATA           #IMPLIED
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/media-source ">
@@ -437,7 +437,7 @@ PUBLIC "-//OASIS//ELEMENTS LIGHTWEIGHT DITA Topic//EN"
 <!ELEMENT media-track		EMPTY        >
 <!ATTLIST media-track
              %localization;
-             name       CDATA           #FIXED "media-track"
+             name       CDATA           #FIXED "track"
              value      CDATA           #IMPLIED
              outputclass  CDATA          #IMPLIED
              class CDATA "+ topic/param h5m-d/media-track ">
