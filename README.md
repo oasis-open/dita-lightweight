@@ -25,7 +25,7 @@
 
 <div><h2><a id="purposeClarifications">Additions to Statement of Purpose</a></h2>
 
-<p>Repository Maintainers may include here any clarifications &mdash; any additional sections, subsections, and paragraphs that the Maintainer(s) wish to add as descriptive text, reflecting (sub-) project status, milestones, releases, modifications to statement of purpose, etc.  The project Maintainers will create and maintain this content on behalf of the participants.</p>
+<p>This repository contains experimental work from the Lightweight DITA subcommittee. The Lightweight DITA schema files and documentation moved to the <a href="https://github.com/oasis-tcs/dita-lwdita">official OASIS Lightweight DITA subcommittee repository</a>.</p>
 </div>
 
 <div>
