@@ -43,7 +43,7 @@
 
 <!--<li><a href="mailto:mpriestl@ca.ibm.com">Michael Priestley</a> (<code>mpriestl@ca.ibm.com</code>); GitHub ID: <a href="https://github.com/">NNNN</a>; <a href="http://www.ibm.com/">IBM</a></li> -->
 
-<li><a href="mailto:cevia@vt.edu">Carlos Evia</a> (<code>cevia@vt.edu</code>); GitHub ID: <a href="https://github.com/carlosevia">carlosevia</a>; <a href="http://liberalarts.vt.edu/departments-and-schools/department-of-english.html">Virginia Tech</a></li>
+<!-- <li><a href="mailto:cevia@vt.edu">Carlos Evia</a> (<code>cevia@vt.edu</code>); GitHub ID: <a href="https://github.com/carlosevia">carlosevia</a>; <a href="http://liberalarts.vt.edu/departments-and-schools/department-of-english.html">Virginia Tech</a></li> -->
 
 <li><a href="mailto:donday@donrday.com">Don R. Day</a> (<code>donday@donrday.com</code>); GitHub ID: <a href="https://github.com/donrday">donrday</a>; OASIS Individual Member</li>
 
